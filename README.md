@@ -103,6 +103,7 @@ using the the app [mLab](https://reasonwithme.herokuapp.com/)
 ## Project Team:
 
 * **Mike Lusso** - *Team Lead* - [Mlusso06](https://github.com/Mlusso06)
+* **Celeste Lewis** -*Something* - [cdlewis42](https://github.com/cdlewis42)
 
 ## BootCamp Acknolegments 
 
@@ -111,3 +112,4 @@ This project was part of the Vanderbilt coding Bootcamp - click [Vanderbilt](htt
 ## Acknowledgments
 
 * Thanks to our Class instructor, and the TAs that have helped define and layout the expectations for the assignment. 
+
