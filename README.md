@@ -110,6 +110,7 @@ using the the app [mLab](https://reasonwithme.herokuapp.com/)
 *  **Celeste Lewis** - *Project aspects of the app* - [cdlewis42](https://github.com/cdlewis42)
 * **Seyed Habib Taghavi** - *Project leader, Repo owner, and aspects of the app* -[habibtaghavi08](https://github.com/habibtaghavi08) 
 
+
 ## BootCamp Acknowledgments 
 
 This project was part of the Vanderbilt coding Bootcamp - click [Vanderbilt](https://bootcamps.vanderbilt.edu/)  for details and how you can enroll.
@@ -117,3 +118,4 @@ This project was part of the Vanderbilt coding Bootcamp - click [Vanderbilt](htt
 ## Acknowledgments
 
 * Thanks to our Class instructor, and the TAs that have helped define and layout the expectations for the assignment. 
+
