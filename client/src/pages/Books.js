@@ -62,6 +62,8 @@ class Books extends Component {
               <h1>What Books Should I Read?</h1>
             </Jumbotron>
             <form>
+              {/* TODO: Need to change these input to what we want (drop down, or radio)*/}
+              {/* TODO: look into Bootstrap */}
               <Input
                 value={this.state.title}
                 onChange={this.handleInputChange}
