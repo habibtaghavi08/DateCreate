@@ -6,9 +6,12 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import Form from 'react-bootstrap/Form';
+
 
 class Books extends Component {
   state = {
+    datecost: "",
     books: [],
     title: "",
     author: "",
@@ -57,13 +60,22 @@ class Books extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-10">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Filter your Date Criteria </h1>
             </Jumbotron>
             <form>
-              {/* TODO: Need to change these input to what we want (drop down, or radio)*/}
-              {/* TODO: look into Bootstrap */}
+              <Form.Group controlId="exampleForm.ControlSelect1">
+                <Form.Label>Select your Date Budget</Form.Label>
+                <Form.Control as="select">
+                  <option>Free</option>
+                  <option>$</option>
+                  <option>$$</option>
+                  <option>$$$</option>
+                  <option>$$$$</option>
+                </Form.Control>
+              </Form.Group>
+
               <Input
                 value={this.state.title}
                 onChange={this.handleInputChange}
@@ -86,13 +98,13 @@ class Books extends Component {
                 disabled={!(this.state.author && this.state.title)}
                 onClick={this.handleFormSubmit}
               >
-                Submit Book
+                Submit
               </FormBtn>
             </form>
           </Col>
-          <Col size="md-6 sm-12">
+          <Col size="md-2 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Date Create sub area</h1>
             </Jumbotron>
             {this.state.books.length ? (
               <List>
@@ -108,8 +120,8 @@ class Books extends Component {
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
-            )}
+                <h3>No Results to Display</h3>
+              )}
           </Col>
         </Row>
       </Container>
