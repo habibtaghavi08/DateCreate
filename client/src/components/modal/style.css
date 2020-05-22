@@ -28,11 +28,13 @@
     
 }
 .modal-body{
-    background-color: black;
-    color:#e74944;
+    background-color: white;
+    color:black;
     border-style: solid;
     border-color:#4EC5C1;
-    border-width: 7px;       
+    border-width: 7px;
+    font-size: large; 
+    font-weight: bold;     
 }
 .modal-content{
     background-color: black;
