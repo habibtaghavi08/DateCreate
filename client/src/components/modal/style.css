@@ -1,0 +1,65 @@
+.btn {
+    float:right;
+    background-color: #e74944;
+    color:#4EC5C1;
+    font-weight: bold;
+    border-style: solid ;
+    border-color: black;
+    border-width: 4px;
+}
+.btn:hover {
+    background-color:#4EC5C1;
+    color: #e74944 ;
+    border-color: black;
+    
+}
+.btn-1{
+    background-color: #e74944;
+    color:black;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #4EC5C1;
+    border-width: 4px;
+}
+.btn-1:hover {
+    background-color:#e74944;
+    color:#4EC5C1;  
+    border-color:#4EC5C1;
+    
+}
+.modal-body{
+    background-color: white;
+    color:black;
+    border-style: solid;
+    border-color:#4EC5C1;
+    border-width: 7px;
+    font-size: large; 
+    font-weight: bold;     
+}
+.modal-content{
+    background-color: black;
+    color:#e74944;
+    border-style: solid;
+    border-color:#4EC5C1;
+    border-width: 7px;
+}
+
+.modal-header{
+background-color: black;
+color:#e74944;
+border-style: solid;
+border-color:#4EC5C1;
+border-width: 7px;
+text-align: center;
+font-size: xx-large;
+font-weight: bold;
+}
+
+.modal-title{
+    background-color: black;
+    color:#e74944;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bolder;  
+
+}

@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Reggie from "./pages/Registration";
+import Footer from "./components/modal";
 function App() {
   return (
     <Router>
@@ -21,7 +22,8 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/reggie" component={Reggie} />
           <Route component={NoMatch} />
-        </Switch>
+        </Switch> 
+        <Footer/> 
       </div>
     </Router>
   );
