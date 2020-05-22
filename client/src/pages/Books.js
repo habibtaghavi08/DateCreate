@@ -59,9 +59,9 @@ class Books extends Component {
   render() {
     return (
       <Container fluid>
-        <Row>
+        <Row style={{ marginTop: '264px' }}>
           <Col size="md-10">
-            <Jumbotron>
+            <Jumbotron >
               <h1>Filter your Date Criteria </h1>
             </Jumbotron>
             <form>
