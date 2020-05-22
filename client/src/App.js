@@ -6,7 +6,7 @@ import About from "./pages/About";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Navbar";
+import Nav from "./components/Nav";
 import Reggie from "./pages/Registration";
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/reggie" component={Reggie} />        
+          <Route exact path="/reggie" component={Reggie} />
           <Route component={NoMatch} />
         </Switch>
       </div>

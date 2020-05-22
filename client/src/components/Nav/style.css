@@ -1,0 +1,83 @@
+
+img{
+    height: 10rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    
+    
+}
+
+.navbar_navigation{
+    width:100%;
+    top:0;
+    left: 0;
+    background-color: black;
+    height: 210px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.nav_items ul,
+.user_nav ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    display:flex;
+    
+}
+
+.nav_items li,
+.user_nav li{
+    padding: 0 0.5rem;
+    
+}
+
+.nav_items a,
+.user_nav a{
+    color:#4EC5C1;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.nav_items a:hover,
+.user_nav a:hover{
+    color:#EC576B;
+    text-decoration: none;
+    
+}
+
+.navbar_navigation{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem;
+    
+}
+
+.brand-name{
+    margin-left: 3.5rem;
+    
+}
+
+.name{
+    color: #4EC5C1;
+    font-family: 'Wendy One', sans-serif; 
+    font-size: 5vw;
+    display: block;
+}
+
+.slogan{
+    color:#EC576B;
+    font-family: 'Wendy One', sans-serif;
+    margin-top: -2.5rem;
+    margin-left: 2rem;
+    font-size: 1.75vw;
+    display: block;
+    
+}
+
+.user_nav{
+    margin-left: 2rem;
+    
+}
