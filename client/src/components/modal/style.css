@@ -1,15 +1,17 @@
 .btn {
     float:right;
-    background-color: #e74944;
-    color:#4EC5C1;
+    background-color: black;
+    color: #e74944;
     font-weight: bold;
+    font-family: 'Wendy One', sans-serif;
+    letter-spacing: .05em;
     border-style: solid ;
-    border-color: black;
+    border-color: #4EC5C1;
     border-width: 4px;
 }
 .btn:hover {
-    background-color:#4EC5C1;
-    color: #e74944 ;
+    background-color:#e74944;
+    color: #4EC5C1 ;
     border-color: black;
     
 }

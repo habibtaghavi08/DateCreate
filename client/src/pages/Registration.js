@@ -43,7 +43,7 @@ class Registration extends React.Component{
                     <option selected=""> Select job type</option>
                     <option>Designer</option>
                     <option>Manager</option>
-                    <option>Accaunting</option>
+                    <option>Accounting</option>
                 </select>
             </div>
             <div className="form-group input-group">
