@@ -10,11 +10,13 @@ img{
 .navbar_navigation{
     width:100%;
     top:0;
-    left: 0;
+    left: 5px;
     background-color: black;
     height: 210px;
     display: flex;
-    justify-content: space-around;
+    
+    align-items: center;
+    padding: 0 1rem;
     
 }
 
@@ -23,7 +25,8 @@ img{
     list-style-type: none;
     margin:0;
     padding:0;
-    display:flex;
+    display: flex;
+    
     
 }
 
@@ -47,24 +50,19 @@ img{
     
 }
 
-.navbar_navigation{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    padding: 0 1rem;
-    
-}
+
 
 .brand-name{
-    margin-left: 3.5rem;
+    margin-left: 85px;
     
 }
 
 .name{
     color: #4EC5C1;
     font-family: 'Wendy One', sans-serif; 
-    font-size: 5vw;
+    font-size: 6vw;
     display: block;
+    margin-top: -25px;
 }
 
 .slogan{
@@ -78,6 +76,178 @@ img{
 }
 
 .user_nav{
-    margin-left: 2rem;
+    margin-left: 160px;
     
+}
+
+/*---------Media Query All - 599px --------------*/
+
+@media all and (max-device-width: 599px) {
+    .nav_items ul,
+    .user_nav ul{
+    display: none;
+    }
+    
+
+    img{
+        height: 12rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-left: 4rem;
+    }
+
+    .name{
+        display: none;
+    }
+    
+    .slogan{
+        display: none;
+        
+        
+    }
+
+    .brand-name{
+        margin-left: 0;
+        
+    }
+}
+
+/*---------Media Query 600px - 799px --------------*/
+
+@media (min-width: 600px) and (max-device-width: 799px) {
+    .nav_items ul,
+    .user_nav ul{
+    display: none;
+    }
+    
+
+    img{
+        height: 8rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+    }
+
+    .name{
+        color: #4EC5C1;
+        font-family: 'Wendy One', sans-serif; 
+        font-size: 40.5px;
+        display: block;
+        margin-left: 12px;
+    }
+    
+    .slogan{
+        color:#EC576B;
+        font-family: 'Wendy One', sans-serif;
+        margin-top: -0.5rem;
+        margin-left: 12x;
+        font-size: 22px;
+        
+        
+    }
+
+    .brand-name{
+        margin-left: 0;
+        
+    }
+}
+
+/*---------Media Query 800px -1199px--------------*/
+
+@media (min-width: 800px) and (max-device-width: 1199px) {
+    .nav_items ul,
+    .user_nav ul{
+    display: none;
+    }
+    
+
+    img{
+        height: 10rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+    }
+
+    .name{
+        color: #4EC5C1;
+        font-family: 'Wendy One', sans-serif; 
+        font-size: 6vw;
+        display: block;
+    }
+    
+    .slogan{
+        color:#EC576B;
+        font-family: 'Wendy One', sans-serif;
+        margin-top: -0.5rem;
+        margin-left: 0;
+        font-size: 3vw;
+        
+        
+    }
+
+    .brand-name{
+        margin-left: 0;
+        
+    }
+}
+
+/*---------Media Query 1200px- 1450px --------------*/
+
+@media (min-width: 1200px) and (max-device-width: 1450px){
+    
+    .navbar_navigation{
+        width:100%;
+        top:0;
+        left: 0;
+        background-color: black;
+        height: 210px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: left;
+        padding: 0 1rem;
+        
+    }
+    
+    
+    .nav_items ul,
+    .user_nav ul{
+    display: flex;
+    }
+    
+
+    img{
+        height: 10rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    .name{
+        color: #4EC5C1;
+        font-family: 'Wendy One', sans-serif; 
+        font-size: 4vw;
+        display: block;
+    }
+    
+    .slogan{
+        color:#EC576B;
+        font-family: 'Wendy One', sans-serif;
+        margin-top: -0.5rem;
+        margin-left: 0;
+        font-size: 1.75vw;
+        
+        
+    }
+
+    .brand-name{
+        margin-left: 0;
+        
+    }
+
+    .nav_items a,
+    .user_nav a{
+    color:#4EC5C1;
+    text-decoration: none;
+    font-size: 1.25rem;
+    }
 }

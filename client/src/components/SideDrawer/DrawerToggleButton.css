@@ -1,0 +1,49 @@
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40px;
+    width: 36px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.toggle-button:focus {
+    outline: none;
+    
+}
+
+.toggle-button-line{
+    width: 30px;
+    height: 3px;
+    background: #4EC5C1;
+}
+
+/*---------Media Query All - 599px --------------*/
+
+@media all and (max-device-width: 599px) {
+    .toggle-button{
+        display: flex;
+        margin-left: 17px;
+        margin-right: 0;
+    }
+}
+
+/*---------Media Query 600px - 799px --------------*/
+
+@media (min-width: 600px) and (max-device-width: 799px) {
+    .toggle-button{
+        display: flex;
+    }
+}
+
+/*---------Media Query 800px -1199px--------------*/
+
+@media (min-width: 800px) and (max-device-width: 1199px) {
+    .toggle-button{
+        display: flex;
+    }
+}
