@@ -13,7 +13,7 @@ export default function Modal() {
           <div className="modal-content">
             <div className="modal-header">
               <h2 className="modal-title" id="exampleModalLongTitle">TERMS OF SERVICE</h2>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -22,11 +22,7 @@ export default function Modal() {
               DateCreate is not responsible
             </div>
             <div className="modal-footer">
-              <form action="#" onSubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
-                <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the Terms and Conditions and Privacy Policy
-              <input type="submit" name="submit" value="Submit" className="btn btn-primary btn-1" />
-              </form>
-
+              <button type="button" className="btn btn-primary btn-1" data-dismiss="modal">Agree</button>
             </div>
           </div>
         </div>
