@@ -43,7 +43,7 @@ class App extends Component {
           <Nav drawerClickHandler={this.drawerToggleClickHandler} />
           <SideDrawer show={this.state.sideDrawerOpen} />
           {backdrop}
-          <Footer />
+
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/landing" component={Landing} />
@@ -55,9 +55,11 @@ class App extends Component {
             <Route exact path="/tos" component={() => { window.location.href = './component/modal'; return null; }} />
             <Route component={NoMatch} />
           </Switch>
-
+          <Footer />
         </div>
+
       </Router>
+
     );
   }
 }

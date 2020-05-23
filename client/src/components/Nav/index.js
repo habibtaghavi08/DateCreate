@@ -20,12 +20,12 @@ const Nav = props => (
         <li><a href="/profile">My Profile |</a></li>
       </ul>
     </div>
-    <div>
-      <div className="brand-name">
-        <span className="name">Date Create</span>
-        <span className="slogan">Let every date be an adventure</span>
-      </div>
+
+    <div className="brand-name">
+      <span className="name">Date Create</span>
+      <span className="slogan">Let every date be an adventure</span>
     </div>
+
 
     <div className="user_nav">
       <ul>

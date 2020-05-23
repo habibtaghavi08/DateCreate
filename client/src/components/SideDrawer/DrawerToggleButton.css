@@ -40,9 +40,9 @@
     }
 }
 
-/*---------Media Query 800px -1199px--------------*/
+/*---------Media Query 800px 1455px--------------*/
 
-@media (min-width: 800px) and (max-device-width: 1199px) {
+@media (min-width: 800px) and (max-device-width: 1455px) {
     .toggle-button{
         display: flex;
     }

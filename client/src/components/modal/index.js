@@ -8,7 +8,7 @@ export default function Modal() {
       <button type="button" className="btn btn-light" data-toggle="modal" data-target="#exampleModalLong">
         Terms of Service
       </button>
-      <div className="modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div className="modal fade" data-backdrop="false" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">

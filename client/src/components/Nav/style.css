@@ -152,9 +152,9 @@ img{
     }
 }
 
-/*---------Media Query 800px -1199px--------------*/
+/*---------Media Query 800px 1455px--------------*/
 
-@media (min-width: 800px) and (max-device-width: 1199px) {
+@media (min-width: 800px) and (max-device-width: 1455px) {
     .nav_items ul,
     .user_nav ul{
     display: none;
@@ -165,14 +165,18 @@ img{
         height: 10rem;
         margin-bottom: 1rem;
         margin-top: 1rem;
-        margin-left: 1.5rem;
+        margin-left: 5rem;
+        
     }
-
+    
+    
     .name{
         color: #4EC5C1;
         font-family: 'Wendy One', sans-serif; 
         font-size: 6vw;
         display: block;
+        text-align: center;
+        
     }
     
     .slogan{
@@ -181,6 +185,7 @@ img{
         margin-top: -0.5rem;
         margin-left: 0;
         font-size: 3vw;
+        text-align: center;
         
         
     }
@@ -191,9 +196,9 @@ img{
     }
 }
 
-/*---------Media Query 1200px- 1450px --------------*/
+/*---------Media Query 1200px- 1790px --------------*/
 
-@media (min-width: 1200px) and (max-device-width: 1450px){
+@media (min-width: 1456px) and (max-device-width: 1790px){
     
     .navbar_navigation{
         width:100%;
