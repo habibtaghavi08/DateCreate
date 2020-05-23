@@ -1,0 +1,258 @@
+
+img{
+    height: 10rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    
+    
+}
+
+.navbar_navigation{
+    width:100%;
+    top:0;
+    left: 5px;
+    background-color: black;
+    height: 210px;
+    display: flex;
+    
+    align-items: center;
+    padding: 0 1rem;
+    
+}
+
+.nav_items ul,
+.user_nav ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    display: flex;
+    
+    
+}
+
+.nav_items li,
+.user_nav li{
+    padding: 0 0.5rem;
+    
+}
+
+.nav_items a,
+.user_nav a{
+    color:#4EC5C1;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.nav_items a:hover,
+.user_nav a:hover{
+    color:#EC576B;
+    text-decoration: none;
+    
+}
+
+
+
+.brand-name{
+    margin-left: 85px;
+    
+}
+
+.name{
+    color: #4EC5C1;
+    font-family: 'Wendy One', sans-serif; 
+    font-size: 6vw;
+    display: block;
+    margin-top: -25px;
+}
+
+.slogan{
+    color:#EC576B;
+    font-family: 'Wendy One', sans-serif;
+    margin-top: -2.5rem;
+    margin-left: 2rem;
+    font-size: 1.75vw;
+    display: block;
+    
+}
+
+.user_nav{
+    margin-left: 160px;
+    
+}
+
+/*---------Media Query All - 599px --------------*/
+
+@media all and (max-device-width: 599px) {
+    .nav_items ul,
+    .user_nav ul{
+    display: none;
+    }
+    
+
+    img{
+        height: 12rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-left: 4rem;
+    }
+
+    .name{
+        display: none;
+    }
+    
+    .slogan{
+        display: none;
+        
+        
+    }
+
+    .brand-name{
+        margin-left: 0;
+        
+    }
+}
+
+/*---------Media Query 600px - 799px --------------*/
+
+@media (min-width: 600px) and (max-device-width: 799px) {
+    .nav_items ul,
+    .user_nav ul{
+    display: none;
+    }
+    
+
+    img{
+        height: 8rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+    }
+
+    .name{
+        color: #4EC5C1;
+        font-family: 'Wendy One', sans-serif; 
+        font-size: 40.5px;
+        display: block;
+        margin-left: 12px;
+    }
+    
+    .slogan{
+        color:#EC576B;
+        font-family: 'Wendy One', sans-serif;
+        margin-top: -0.5rem;
+        margin-left: 12x;
+        font-size: 22px;
+        
+        
+    }
+
+    .brand-name{
+        margin-left: 0;
+        
+    }
+}
+
+/*---------Media Query 800px 1455px--------------*/
+
+@media (min-width: 800px) and (max-device-width: 1455px) {
+    .nav_items ul,
+    .user_nav ul{
+    display: none;
+    }
+    
+
+    img{
+        height: 10rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-left: 5rem;
+        
+    }
+    
+    
+    .name{
+        color: #4EC5C1;
+        font-family: 'Wendy One', sans-serif; 
+        font-size: 6vw;
+        display: block;
+        text-align: center;
+        
+    }
+    
+    .slogan{
+        color:#EC576B;
+        font-family: 'Wendy One', sans-serif;
+        margin-top: -0.5rem;
+        margin-left: 0;
+        font-size: 3vw;
+        text-align: center;
+        
+        
+    }
+
+    .brand-name{
+        margin-left: 0;
+        
+    }
+}
+
+/*---------Media Query 1200px- 1790px --------------*/
+
+@media (min-width: 1456px) and (max-device-width: 1790px){
+    
+    .navbar_navigation{
+        width:100%;
+        top:0;
+        left: 0;
+        background-color: black;
+        height: 210px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: left;
+        padding: 0 1rem;
+        
+    }
+    
+    
+    .nav_items ul,
+    .user_nav ul{
+    display: flex;
+    }
+    
+
+    img{
+        height: 10rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    .name{
+        color: #4EC5C1;
+        font-family: 'Wendy One', sans-serif; 
+        font-size: 4vw;
+        display: block;
+    }
+    
+    .slogan{
+        color:#EC576B;
+        font-family: 'Wendy One', sans-serif;
+        margin-top: -0.5rem;
+        margin-left: 0;
+        font-size: 1.75vw;
+        
+        
+    }
+
+    .brand-name{
+        margin-left: 0;
+        
+    }
+
+    .nav_items a,
+    .user_nav a{
+    color:#4EC5C1;
+    text-decoration: none;
+    font-size: 1.25rem;
+    }
+}

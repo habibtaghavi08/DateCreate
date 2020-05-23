@@ -1,4 +1,5 @@
 import React from "react";
+import Button from 'react-bootstrap/Button';
 
 // This file exports the Input, TextArea, and FormBtn components
 
@@ -13,7 +14,7 @@ export function Input(props) {
 export function TextArea(props) {
   return (
     <div className="form-group">
-      <textarea className="form-control" rows="20" {...props} />
+      <textarea className="form-control" rows="3" {...props} />
     </div>
   );
 }
@@ -25,4 +26,27 @@ export function FormBtn(props) {
     </button>
   );
 }
-// export function Dropdown ()
+export function ProfileBtn(props)
+{
+  return (
+<Button {...props} className="btn btn-info" variant="info" size="lg" block>
+{props.children}
+</Button>
+  );
+}
+export function CompletedBtn(props)
+{
+  return (
+<Button {...props} className="btn btn-info" variant="info" size="lg" block>
+{props.children}
+</Button>
+  );
+}
+export function PlannedDateBtn(props)
+{
+  return (
+<Button {...props} className="btn btn-info" variant="info" size="lg" block>
+{props.children}
+</Button>
+  );
+}

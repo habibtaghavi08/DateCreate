@@ -1,8 +1,8 @@
 import React from "react"
 import "./registration.css"
 
-class Registration extends React.Component{
-    render(){
+class Registration extends React.Component {
+    render() {
         return (<div className="card bg-light">
         <article className="card-body mx-auto">
             <h4 className="card-title mt-3 text-center">Create Account</h4>
@@ -35,7 +35,19 @@ class Registration extends React.Component{
                 </select>
                 <input name="" className="form-control" placeholder="Phone number" type="text"/>
             </div>
-            
+
+            <div className="form-group input-group">
+                <div className="input-group-prepend">
+                    {/* <span className="input-group-text"> <i className="fa fa-building"></i> </span> */}
+                </div>
+                <select className="form-control">
+                    <option selected=""> Select job type</option>
+                    <option>Designer</option>
+                    <option>Manager</option>
+                    <option>Accounting</option>
+                </select>
+            </div>
+
             <div className="form-group input-group">
                 <div className="input-group-prepend">
                     {/* <span className="input-group-text"> <i className="fa fa-lock"></i> </span> */}
@@ -58,6 +70,7 @@ class Registration extends React.Component{
         
         </div>) 
         
+
     }
-} 
+}
 export default Registration;
