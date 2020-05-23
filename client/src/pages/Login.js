@@ -1,8 +1,7 @@
 import React from "react";
-
+import Signin from "../components/Login"
 function Login() {
-    return (
-        <h1>This will be the login page</h1>
+    return(<Signin name=""/>
     );
 }
 
