@@ -1,31 +1,34 @@
 import React from "react"
 import "./style.css";
 
-export default function Modal(){
+export default function Modal() {
   return (
     <div>
-      <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalLong">
-       CLICK FOR T.O.S.
+      <a className="btn btn-light" href="/repo" role="button">Github Repo</a>
+      <button type="button" className="btn btn-light" data-toggle="modal" data-target="#exampleModalLong">
+        Terms of Service
       </button>
-      
-       <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h2 class="modal-title" id="exampleModalLongTitle">TERMS OF SERVICE</h2>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <div className="modal fade" data-backdrop="false" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div className="modal-dialog" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h2 className="modal-title" id="exampleModalLongTitle">TERMS OF SERVICE</h2>
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
-              BY ENTERING THIS SITE, USER AGREES THAT THEY ARE 18 YEARS OF AGE, OR OLDER. DATE-CREATE IS NOT RESPONSIBLE, IF USER IS NOT OF AGE. THANK YOU AND ENJOY OUR SITE.
+            <div className="modal-body">
+              By entering this site, the user confirms that they are 18 years of age or older.<br />
+              DateCreate is not responsible
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" class="btn-1" data-dismiss="modal">AGREE</button>
-             </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-primary btn-1" data-dismiss="modal">Agree</button>
+            </div>
           </div>
         </div>
       </div>
+
+      <a className="btn btn-light" href="/about" role="button">About Us</a>
 
     </div>
   )

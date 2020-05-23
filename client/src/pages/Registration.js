@@ -1,8 +1,8 @@
 import React from "react"
 import "./registration.css"
 
-class Registration extends React.Component{
-    render(){
+class Registration extends React.Component {
+    render() {
         return (<div className="card bg-light">
         <article className="card-body mx-auto">
             <h4 className="card-title mt-3 text-center">Create Account</h4>
@@ -68,6 +68,7 @@ class Registration extends React.Component{
         
         </div>) 
         
+
     }
-} 
+}
 export default Registration;

@@ -17,7 +17,8 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.18.7",
+    "video.js": "^7.7.6"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -25,6 +26,14 @@
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
-    "react-bootstrap": "^1.0.1"
+    "object-assign": "^4.1.1",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.13.1",
+    "react-iframe": "^1.8.0",
+    "react-player": "^2.0.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "video-react": "^0.14.1"
   }
 }
