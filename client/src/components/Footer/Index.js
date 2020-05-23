@@ -3,7 +3,7 @@ import "./style.css";
 
 import Modal from "../modal";
 
-
+//// adding suede code here
 function Footer() {
 
    return (
