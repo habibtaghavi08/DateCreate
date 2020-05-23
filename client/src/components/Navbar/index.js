@@ -36,6 +36,14 @@ function Navbar() {
                             My Profile
                         </Link>
                     </li>
+                    <li className="nav-item">
+                        <Link
+                            to="/login"
+                            className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"}
+                        >
+                           login
+                        </Link>
+                    </li>
                 </ul>
             </div>
             <div clasName="header-name">
@@ -43,6 +51,7 @@ function Navbar() {
                 <div className="slogan">Let Every Date Be An Adventure</div>
             </div>
             <div>
+            
                 <ul className="user-nav">
                     <li className="nav-item">
                         <Link

@@ -13,13 +13,15 @@ function App() {
     <Router>
       <div>
         <Nav />
+        
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/landing" component={Landing} />
           <Route exact path="/about" component={About} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/reggie" component={Reggie} />        
+          <Route exact path="/reggie" component={Reggie} />
+          <Route exact path="/" component={Reggie} />
           <Route component={NoMatch} />
         </Switch>
       </div>

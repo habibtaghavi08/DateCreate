@@ -8,7 +8,7 @@ class Registration extends React.Component{
             <h4 className="card-title mt-3 text-center">Create Account</h4>
             <p className="text-center">Get started with your free account</p>
             <p className="divider-text">
-                {/* <span className="bg-light">OR</span> */}
+                <span className="bg-light">OR</span>
             </p>
             <form>
             <div className="form-group input-group">
@@ -35,17 +35,7 @@ class Registration extends React.Component{
                 </select>
                 <input name="" className="form-control" placeholder="Phone number" type="text"/>
             </div>
-            <div className="form-group input-group">
-                <div className="input-group-prepend">
-                    {/* <span className="input-group-text"> <i className="fa fa-building"></i> </span> */}
-                </div>
-                <select className="form-control">
-                    <option selected=""> Select job type</option>
-                    <option>Designer</option>
-                    <option>Manager</option>
-                    <option>Accaunting</option>
-                </select>
-            </div>
+            
             <div className="form-group input-group">
                 <div className="input-group-prepend">
                     {/* <span className="input-group-text"> <i className="fa fa-lock"></i> </span> */}
