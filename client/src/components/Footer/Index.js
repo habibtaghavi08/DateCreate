@@ -1,9 +1,18 @@
 import React from "react";
 import "./style.css";
 
-import Modal from "../modal"
+import Modal from "../modal";
+
+
 function Footer() {
-   return <Modal/>
+
+   return (
+      <footer className="footer">
+         <Modal />
+
+      </footer>
+
+   )
 }
 
 
