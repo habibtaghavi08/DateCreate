@@ -18,3 +18,65 @@ p{
     font-size: 25px;
     margin-top: 30px;
 }
+
+/*---------Media Query All - 600px --------------*/
+
+@media all and (max-device-width: 600px) {
+    
+    h1{
+        font-family: 'Wendy One', sans-serif; 
+        font-size: 40px;
+    }
+    
+    h2{
+        font-family: 'Wendy One', sans-serif; 
+        font-size: 30px;
+    }
+    
+    p{
+        font-style: italic;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+}
+
+/*---------Media Query 601px - 767px --------------*/
+
+@media (min-width: 601px) and (max-device-width: 767px) {
+    
+    h1{
+        font-family: 'Wendy One', sans-serif; 
+        font-size: 45px;
+    }
+    
+    h2{
+        font-family: 'Wendy One', sans-serif; 
+        font-size: 35px;
+    }
+    
+    p{
+        font-style: italic;
+        font-size: 25px;
+        margin-top: 30px;
+    }
+}
+
+/*---------Media Query 768px--------------*/
+
+@media (min-width: 768px){
+    h1{
+        font-family: 'Wendy One', sans-serif; 
+        font-size: 45px;
+    }
+    
+    h2{
+        font-family: 'Wendy One', sans-serif; 
+        font-size: 35px;
+    }
+    
+    p{
+        font-style: italic;
+        font-size: 25px;
+        margin-top: 30px;
+    }
+}
