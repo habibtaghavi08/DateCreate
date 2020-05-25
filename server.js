@@ -17,9 +17,9 @@ app.use(routes);
 
 // Connect to the Mongo DB
 // TODO: rename the database to something that will relate to our app
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/datecreate");
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
