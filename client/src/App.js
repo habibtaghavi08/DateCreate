@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Home from "./pages/Home";
 import Landing from "./pages/Filter";
 import About from "./pages/About";
@@ -7,13 +7,61 @@ import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
+//import LoginNav from "./components/LoginNav"
 import SideDrawer from "./components/SideDrawer/SideDrawer";
 import Backdrop from "./components/Backdrop/Backdrop"
 import Reggie from "./pages/Registration";
 import Footer from "./components/Footer";
+import "./app.css"
 
 
+const loginAuth = {
+  isAuthenticated: false,
+  authenticate(cb) {
+    this.isAuthenticated = true
+    setTimeout(cb, 100)
+  },
+  signout(cb) {
+    this.isAuthenticated = false
+    setTimeout(cb, 100)
+  }
+}
 
+class LoginRedirect extends React.Component {
+  state = {
+    rediretToReferrer: false
+  }
+  login = () => {
+    loginAuth.authenticate(() => {
+      this.setState(() => ({
+        rediretToReferrer: true
+      }))
+    })
+  }
+  render() {
+    const { rediretToReferrer } = this.state
+
+    if (rediretToReferrer === true) {
+      return (
+        <Redirect to="/login" />
+      )
+    }
+    return (
+      <div className="alert alert-info" role="alert">
+        <p>Oh so sorry, you have reached a restricted page. You must log in to view this page</p>
+        <button className="btn2" onClick={this.login}>Log In</button>
+      </div>
+    )
+  }
+}
+
+const PrivateRoute = ({ component: Component, ...rest }) => (
+  <Route {...rest} render={(props) => (
+    loginAuth.isAuthenticated === true
+      ? <Component {...props} />
+      : <Redirect to='/loginredirect' />
+  )} />
+)
 
 class App extends Component {
   state = {
@@ -46,10 +94,11 @@ class App extends Component {
 
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/landing" component={Landing} />
+            <PrivateRoute exact path="/landing" component={Landing} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/profile" component={Profile} />
+            <PrivateRoute exact path="/profile" component={Profile} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/loginredirect" component={LoginRedirect} />
             <Route exact path="/reggie" component={Reggie} />
             <Route exact path="/repo" component={() => { window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null; }} />
             <Route exact path="/tos" component={() => { window.location.href = './component/modal'; return null; }} />
