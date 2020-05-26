@@ -11,6 +11,7 @@ import LoginNav from "./components/LoginNav"
 import SideDrawer from "./components/SideDrawer/SideDrawer";
 import Backdrop from "./components/Backdrop/Backdrop"
 import Reggie from "./pages/Registration";
+import Results from "./pages/Results";
 import Footer from "./components/Footer";
 import "./app.css"
 
@@ -121,6 +122,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/loginredirect" component={LoginRedirect} />
             <Route exact path="/reggie" component={Reggie} />
+            <Route exact path="/results" component={Results} />
             <Route exact path="/repo" component={() => {window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null;}} />
             <Route exact path="/tos" component={() => {window.location.href = './component/modal'; return null;}} />
             <Route component={NoMatch} />
