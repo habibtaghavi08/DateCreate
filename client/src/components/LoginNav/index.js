@@ -26,7 +26,7 @@ const Nav = props => (
 
     <div className="user_nav">
       <ul>
-        <li><a href="/login">Logout |</a></li>
+        <li><button type="button" className="link-button" onClick={() => {props.loginAuth.signout((props.isAuthenticated = false))}}>Logout |</button></li>
 
       </ul>
     </div>
