@@ -14,6 +14,9 @@ import Reggie from "./pages/Registration";
 import Results from "./pages/Results";
 import Footer from "./components/Footer";
 import "./app.css"
+import Planned from './pages/Planned';
+import Completed from "./pages/Completed";
+
 
 
 
@@ -122,9 +125,13 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/loginredirect" component={LoginRedirect} />
             <Route exact path="/reggie" component={Reggie} />
+
             <Route exact path="/results" component={Results} />
-            <Route exact path="/repo" component={() => {window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null;}} />
-            <Route exact path="/tos" component={() => {window.location.href = './component/modal'; return null;}} />
+            <Route exact path="/planned" component={Planned}/>
+            <Route exact path="/completed" component={Completed}/>
+            <Route exact path="/repo" component={() => { window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null; }} />
+            <Route exact path="/tos" component={() => { window.location.href = './component/modal'; return null; }} />
+
             <Route component={NoMatch} />
           </Switch>
           <Footer />

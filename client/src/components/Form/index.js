@@ -1,5 +1,6 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
+import {NavLink, Link } from "react-router-dom";
 
 // This file exports the Input, TextArea, and FormBtn components
 
@@ -31,6 +32,7 @@ export function ProfileBtn(props) {
     <Button {...props} className="btn btn-info" variant="info" size="lg" block>
       {props.children}
     </Button>
+
   );
 }
 export function CompletedBtn(props) {
