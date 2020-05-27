@@ -46,8 +46,8 @@ class Results extends Component {
                         <div className="activity-container">
                             <h1>Activity Selection:</h1>
                             <h3 className="act-budget">Activity Budget: </h3>
-                            <h3 className="act-name">Name: </h3>
-                            <h3 className="act-type">Type: </h3>
+                            <h3 className="act-name">Resturaunt Name: </h3>
+                            <h3 className="act-type">Cuisine Type: </h3>
                             <h3 className="act-rating">Rating: </h3>
                             <h3 className="act-pic"></h3>
                             <h3 className="act-location">Location: </h3>
