@@ -7,11 +7,15 @@ import Modal from "../modal";
 function Footer() {
 
    return (
-      <footer className="footer">
-         <Modal />
-
-      </footer>
-
+      <div className="main-footer">
+         <div className="container">
+            <div className="row">
+               <div className="col">
+                  <Modal />
+               </div>
+            </div>
+         </div>
+      </div>
    )
 }
 

@@ -109,29 +109,35 @@ class App extends Component {
       backdrop = <Backdrop click={this.backdropClickHandler} />
     }
     return (
-      <Router>
-        <div style={{height: '100%'}}>
-          <AuthButton drawerClickHandler={this.drawerToggleClickHandler} />
-          <SideDrawer show={this.state.sideDrawerOpen} />
-          {backdrop}
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <PrivateRoute exact path="/landing" component={Landing} />
-            <Route exact path="/about" component={About} />
-            <PrivateRoute exact path="/profile" component={Profile} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/loginredirect" component={LoginRedirect} />
-            <Route exact path="/reggie" component={Reggie} />
-            <Route exact path="/results" component={Results} />
-            <Route exact path="/repo" component={() => {window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null;}} />
-            <Route exact path="/tos" component={() => {window.location.href = './component/modal'; return null;}} />
-            <Route component={NoMatch} />
-          </Switch>
-          <Footer />
+      <div className="page-container">
+        <div className="content-wrap">
+          <Router>
+            <div style={{height: '100%'}}>
+              <AuthButton drawerClickHandler={this.drawerToggleClickHandler} />
+              <SideDrawer show={this.state.sideDrawerOpen} />
+              {backdrop}
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <PrivateRoute exact path="/landing" component={Landing} />
+                <Route exact path="/about" component={About} />
+                <PrivateRoute exact path="/profile" component={Profile} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/loginredirect" component={LoginRedirect} />
+                <Route exact path="/reggie" component={Reggie} />
+
+                <Route exact path="/results" component={Results} />
+                <Route exact path="/planned" component={Planned} />
+                <Route exact path="/completed" component={Completed} />
+                <Route exact path="/repo" component={() => {window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null;}} />
+                <Route exact path="/tos" component={() => {window.location.href = './component/modal'; return null;}} />
+
+                <Route component={NoMatch} />
+              </Switch>
+            </div>
+          </Router>
         </div>
-
-      </Router>
-
+        <Footer />
+      </div>
     );
   }
 }
