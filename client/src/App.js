@@ -11,6 +11,9 @@ import SideDrawer from "./components/SideDrawer/SideDrawer";
 import Backdrop from "./components/Backdrop/Backdrop"
 import Reggie from "./pages/Registration";
 import Footer from "./components/Footer";
+import Planned from './pages/Planned';
+import Completed from "./pages/Completed";
+
 
 
 
@@ -51,6 +54,8 @@ class App extends Component {
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/reggie" component={Reggie} />
+            <Route exact path="/planned" component={Planned}/>
+            <Route exact path="/completed" component={Completed}/>
             <Route exact path="/repo" component={() => { window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null; }} />
             <Route exact path="/tos" component={() => { window.location.href = './component/modal'; return null; }} />
             <Route component={NoMatch} />
