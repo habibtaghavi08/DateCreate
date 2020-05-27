@@ -1,3 +1,13 @@
+.page-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrap{
+    flex:1;
+}
+
 .alert{
     background-color: #4EC5C1;
     text-align: center;
