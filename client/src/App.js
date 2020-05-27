@@ -14,6 +14,9 @@ import Reggie from "./pages/Registration";
 import Results from "./pages/Results";
 import Footer from "./components/Footer";
 import "./app.css"
+import Planned from './pages/Planned';
+import Completed from "./pages/Completed";
+
 
 
 
