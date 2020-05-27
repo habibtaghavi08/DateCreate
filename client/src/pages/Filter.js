@@ -2,13 +2,15 @@ import React, { Component } from "react";
 // import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 // import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn, ProfileBtn, CompletedBtn, PlannedDateBtn } from "../components/Form";
 import Form from 'react-bootstrap/Form';
 import "../components/Jumbotron/style.css";
 import ReactDom from "react-dom";
+import { Redirect, NavLink} from "react-router-dom";
+
 
 // just making a change // 
 class Dates extends Component {
@@ -17,7 +19,8 @@ class Dates extends Component {
     restaurantType: [],
     restRating: "",
     distance: [],
-    zipcode: ""
+    zipcode: "",
+    redirect: false,
   };
   constructor(props) {
     super(props);
@@ -28,23 +31,26 @@ class Dates extends Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
+
+
+
   componentDidMount() {
     // this.loadBooks();
   }
 
-  // loadBooks = () => {
-  //   API.getBooks()
-  //     .then(res =>
-  //       this.setState({ books: res.data, title: "", author: "", synopsis: "" })
-  //     )
-  //     .catch(err => console.log(err));
-  // };
 
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
-      .catch(err => console.log(err));
-  };
+
+handleProfileClk = () => {
+  this.props.history.push('./profile')
+};
+handleCompClk = () => {
+  this.props.history.push('./completed')
+};
+handlePlanClk = () => {
+  this.props.history.push('./planned')
+};
+
+
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -56,7 +62,7 @@ class Dates extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.zipcode && this.state.author) {
-      API.saveBook({
+      API.save({
         zipcode: this.state.zipcode,
         author: this.state.author,
         synopsis: this.state.synopsis
@@ -65,6 +71,10 @@ class Dates extends Component {
         .catch(err => console.log(err));
     }
   };
+
+  // plan() {
+  //   this.props.planned.push("/")
+  // };
 
   render() {
     return (
@@ -184,20 +194,17 @@ class Dates extends Component {
           </Col>
           <Col size="md-2">
             <ProfileBtn
-              // disabled={!(this.state.author && this.state.title)}
-              onClick={this.handleFormSubmit}
+              onClick={this.handleProfileClk}
             >
               Profile
               </ProfileBtn>
-            <CompletedBtn
-              // disabled={!(this.state.author && this.state.title)}
-              onClick={this.handleFormSubmit}
+            <CompletedBtn 
+              onClick={this.handleCompClk}
             >
               Completed Dates
-              </CompletedBtn>
-            <PlannedDateBtn
-              // disabled={!(this.state.author && this.state.title)}
-              onClick={this.handleFormSubmit}
+              </CompletedBtn> 
+            <PlannedDateBtn                
+              onClick={this.handlePlanClk}
             >
               Planned Dates
               </PlannedDateBtn>
@@ -211,4 +218,5 @@ class Dates extends Component {
 }
 
 export default Dates;
+
 
