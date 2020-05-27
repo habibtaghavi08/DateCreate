@@ -21,32 +21,51 @@ export function TextArea(props) {
 
 export function FormBtn(props) {
   return (
-    <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-info">
+    <button {...props} style={{float: "right", marginBottom: 10}} className="btn btn-info">
       {props.children}
     </button>
   );
 }
-export function ProfileBtn(props)
-{
+export function ProfileBtn(props) {
   return (
-<Button {...props} className="btn btn-info" variant="info" size="lg" block>
-{props.children}
-</Button>
+    <Button {...props} className="btn btn-info" variant="info" size="lg" block>
+      {props.children}
+    </Button>
   );
 }
-export function CompletedBtn(props)
-{
+export function CompletedBtn(props) {
   return (
-<Button {...props} className="btn btn-info" variant="info" size="lg" block>
-{props.children}
-</Button>
+    <Button {...props} className="btn btn-info" variant="info" size="lg" block>
+      {props.children}
+    </Button>
   );
 }
-export function PlannedDateBtn(props)
-{
+export function PlannedDateBtn(props) {
   return (
-<Button {...props} className="btn btn-info" variant="info" size="lg" block>
-{props.children}
-</Button>
+    <Button {...props} className="btn btn-info" variant="info" size="lg" block>
+      {props.children}
+    </Button>
   );
 }
+export function ShuffleBtn(props) {
+  return (
+    <Button {...props} className="btn btn-info" variant="info" size="lg">
+      {props.children}
+    </Button>
+  );
+}
+export function SavePlannedDateBtn(props) {
+  return (
+    <Button {...props} className="btn btn-info" variant="info" size="lg">
+      {props.children}
+    </Button>
+  );
+}
+export function SaveCompletedBtn(props) {
+  return (
+    <Button {...props} className="btn btn-info" variant="info" size="lg" >
+      {props.children}
+    </Button>
+  );
+}
+

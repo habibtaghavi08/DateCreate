@@ -19,7 +19,7 @@ import "./app.css"
 
 //==========================Login/Logout Check=============================
 const loginAuth = {
-  isAuthenticated: false,
+  isAuthenticated: true,
   authenticate(cb) {
     this.isAuthenticated = true
     setTimeout(cb, 100)

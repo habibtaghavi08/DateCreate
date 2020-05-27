@@ -1,7 +1,7 @@
 .btn {
     float:right;
     background-color: black;
-    color: #e74944;
+    color: #EC576B;
     font-weight: bold;
     font-family: 'Wendy One', sans-serif;
     letter-spacing: .05em;
@@ -13,7 +13,7 @@
     margin-right: 15px;
 }
 .btn:hover {
-    background-color:#e74944;
+    background-color:#EC576B;
     color: black ;
     border-color: black;
     
@@ -44,7 +44,7 @@
 }
 .modal-content{
     background-color: black;
-    color:#e74944;
+    color:#EC576B;
     border-style: solid;
     border-color:#4EC5C1;
     border-width: 7px;
@@ -52,7 +52,7 @@
 
 .modal-header{
 background-color: black;
-color:#e74944;
+color:#EC576B;
 border-style: solid;
 border-color:#4EC5C1;
 border-width: 7px;
@@ -63,7 +63,7 @@ font-weight: bold;
 
 .modal-title{
     background-color: black;
-    color:#e74944;
+    color:#EC576B;
     text-align: center;
     font-size: 48px;
     font-weight: bolder;  
