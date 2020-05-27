@@ -14,7 +14,7 @@ class Player extends Component {
                     width="100%"
                     height="100%"
 
-                    url="https://www.youtube.com/watch?v=O7pC7BnGT2o" />
+                    url="https://www.youtube.com/watch?v=EH_3LrsEq00" />
             </div>
         );
     }
