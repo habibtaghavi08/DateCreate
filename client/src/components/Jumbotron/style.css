@@ -18,6 +18,10 @@ color: black;
 
 }
 
+
+.results{
+    height: 200px;
+
 .rDates {
     font-family: 'Wendy One', sans-serif;
     text-justify: auto;

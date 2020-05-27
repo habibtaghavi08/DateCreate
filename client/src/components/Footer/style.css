@@ -1,43 +1,25 @@
-  html,
-  body {
-    margin:0;
-    padding: 0;
-    height: 100%;
-  }
-
-  
   .footer {
-    position: fixed;
+    position: absolute;
+    left: 0;
     bottom: 0;
+    right: 0;
     width: 100%;
     border-top: 8px solid #4ec5c1;
     height: 100px;
     background-color: black;
     text-align: center;
+    
   }
   
 
-  /*---------Media Query All - 599px --------------*/
+  /*---------Media Query All - 991px --------------*/
 
-@media all and (max-device-width: 599px) {
-  .toggle-.footer{
-      display: none;
-
-  }
-}
-
-/*---------Media Query 600px - 799px --------------*/
-
-@media (min-width: 600px) and (max-device-width: 799px) {
+@media all  and (max-device-width: 991px){
   .footer{
       display: none;
+
   }
 }
 
-/*---------Media Query 800px 1455px--------------*/
 
-@media (min-width: 800px) and (max-device-width: 1455px) {
-  .footer{
-      display: none;
-  }
-}
+
