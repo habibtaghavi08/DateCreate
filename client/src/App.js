@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {BrowserRouter as Router, Route, Switch, Redirect, withRouter} from "react-router-dom";
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch, Redirect, withRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Landing from "./pages/Filter";
 import About from "./pages/About";
@@ -36,7 +36,7 @@ const loginAuth = {
 }
 
 
-const AuthButton = withRouter(({history}) => (
+const AuthButton = withRouter(({ history }) => (
   loginAuth.isAuthenticated === true
     ? <LoginNav />
     : <Nav />
@@ -58,8 +58,8 @@ class LoginRedirect extends React.Component {
     })
   }
   render() {
-    const {rediretToReferrer} = this.state
-    const {from} = this.props.location.state || {from: {pathname: "/"}}
+    const { rediretToReferrer } = this.state
+    const { from } = this.props.location.state || { from: { pathname: "/" } }
 
     if (rediretToReferrer === true) {
       return (
@@ -74,13 +74,13 @@ class LoginRedirect extends React.Component {
   }
 }
 
-const PrivateRoute = ({component: Component, ...rest}) => (
+const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
     loginAuth.isAuthenticated === true
       ? <Component {...props} />
       : <Redirect to={{
         pathname: "/loginredirect",
-        state: {from: props.location}
+        state: { from: props.location }
       }} />
   )} />
 )
@@ -94,29 +94,29 @@ class App extends Component {
     sideDrawerOpen: false,
     userName: "user",
     password: "password1"
-    
+
   };
 
 
   drawerToggleClickHandler = () => {
     this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
     });
   };
 
   backdropClickHandler = () => {
-    this.setState({sideDrawerOpen: false});
+    this.setState({ sideDrawerOpen: false });
   }
- 
-  checkInformation = (input, pw)=>{
+
+  checkInformation = (input, pw) => {
     // if username's password does not equal the input show does not match
     //else show landing page
-  if (input ==! pw ){
-    alert("The password is not correct")
-     }
-   
-   else{
-    window.location.replace("http://localhost/3000/landing")
+    if (input == !pw) {
+      alert("The password is not correct")
+    }
+
+    else {
+      window.location.replace("http://localhost/3000/landing")
     }
   }
 
@@ -143,7 +143,7 @@ class App extends Component {
     //     $("age").val("")
 
     //     alert("User account created successfully!");
-    
+
   }
 
 
@@ -158,30 +158,32 @@ class App extends Component {
     }
     return (
 
-       <div className="page-container">
-      <div className="content-wrap">
-      <Router>
-        <div style={{ height: '100%' }}>
-          <Nav drawerClickHandler={this.drawerToggleClickHandler} />
-          <SideDrawer show={this.state.sideDrawerOpen} />
-          {backdrop}
+      <div className="page-container">
+        <div className="content-wrap">
+          <Router>
+            <div style={{ height: '100%' }}>
+              <Nav drawerClickHandler={this.drawerToggleClickHandler} />
+              <SideDrawer show={this.state.sideDrawerOpen} />
+              {backdrop}
 
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/landing" component={Landing} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/profile" component={Profile} />
-            <Route exact path="/login" component={Login} 
-            userName = {this.state.userName} 
-            password = {this.state.password} 
-            checkInformation = {this.checkInformation} />
-            <Route exact path="/reggie" component={Reggie} 
-            validateRegistration = {this.validateRegistration} />
-            <Route exact path="/repo" component={() => { window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null; }} />
-            <Route exact path="/tos" component={() => { window.location.href = './component/modal'; return null; }} />
-            <Route component={NoMatch} />
-          
-                
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/landing" component={Landing} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/profile" component={Profile} />
+                <Route exact path="/login" component={Login}
+                  userName={this.state.userName}
+                  password={this.state.password}
+                  checkInformation={this.checkInformation} />
+                <Route exact path="/planned" component={Planned} />
+                <Route exact path="/completed" component={Completed} />
+                <Route exact path="/reggie" component={Reggie}
+                  validateRegistration={this.validateRegistration} />
+                <Route exact path="/repo" component={() => { window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null; }} />
+                <Route exact path="/tos" component={() => { window.location.href = './component/modal'; return null; }} />
+                <Route component={NoMatch} />
+
+
               </Switch>
             </div>
           </Router>
