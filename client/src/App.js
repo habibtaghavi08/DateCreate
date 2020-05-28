@@ -47,7 +47,7 @@ class App extends Component {
     }
   }
 
-  validateRegistration = () => {
+  validateLogin = () => {
     console.log("this function is working")
     // var newUser = {
     //   userName: //unsure how to grab username from input box at this moment
