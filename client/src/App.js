@@ -11,13 +11,17 @@ import SideDrawer from "./components/SideDrawer/SideDrawer";
 import Backdrop from "./components/Backdrop/Backdrop"
 import Reggie from "./pages/Registration";
 import Footer from "./components/Footer";
+import { ThemeProvider } from "react-bootstrap";
 
 
 
 
 class App extends Component {
   state = {
-    sideDrawerOpen: false
+    sideDrawerOpen: false,
+    userName: "user",
+    password: "password1"
+    
   };
 
 
@@ -30,6 +34,46 @@ class App extends Component {
   backdropClickHandler = () => {
     this.setState({ sideDrawerOpen: false });
   }
+ 
+  checkInformation = (input, pw)=>{
+    // if username's password does not equal the input show does not match
+    //else show landing page
+  if (input ==! pw ){
+    alert("The password is not correct")
+     }
+   
+   else{
+    window.location.replace("http://localhost/3000/landing")
+    }
+  }
+
+  validateRegistration = () => {
+    console.log("this function is working")
+    // var newUser = {
+    //   userName: //unsure how to grab username from input box at this moment
+    //   password: //get password from input box,
+    //   email: //get email from input box
+    //   phoneNumber: //get phoneNumber from input box
+    //   age: //get age from input
+    // };
+    // console.log(newUser);
+
+    // $.post("/user/new", newUser)
+    //   // On success, run the following code
+    //   .then(function () {
+    //     console.log("user created");
+
+    //     $("#userName").val("");
+    //     $("#password").val("");
+    //     $("#email").val("");
+    //     $("#phoneNumber").val("");
+    //     $("age").val("")
+
+    //     alert("User account created successfully!");
+    
+  }
+
+
 
   render() {
     let backdrop;
@@ -49,8 +93,12 @@ class App extends Component {
             <Route exact path="/landing" component={Landing} />
             <Route exact path="/about" component={About} />
             <Route exact path="/profile" component={Profile} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/reggie" component={Reggie} />
+            <Route exact path="/login" component={Login} 
+            userName = {this.state.userName} 
+            password = {this.state.password} 
+            checkInformation = {this.checkInformation} />
+            <Route exact path="/reggie" component={Reggie} 
+            validateRegistration = {this.validateRegistration} />
             <Route exact path="/repo" component={() => { window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null; }} />
             <Route exact path="/tos" component={() => { window.location.href = './component/modal'; return null; }} />
             <Route component={NoMatch} />
