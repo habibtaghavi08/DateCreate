@@ -7,11 +7,9 @@ import Modal from "../modal";
 function Footer() {
 
    return (
-      <footer className="footer">
+      <div className="main-footer">
          <Modal />
-
-      </footer>
-
+      </div>
    )
 }
 

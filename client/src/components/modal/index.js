@@ -3,7 +3,7 @@ import "./style.css";
 
 export default function Modal() {
   return (
-    <div>
+    <div className="button-group">
       <a className="btn btn-light" href="/repo" role="button">Github Repo</a>
       <button type="button" className="btn btn-light" data-toggle="modal" data-target="#exampleModalLong">
         Terms of Service
