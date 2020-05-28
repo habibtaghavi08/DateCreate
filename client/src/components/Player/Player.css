@@ -8,3 +8,9 @@
     top: 0;
     left: 0;
   }
+
+  @media (min-width: 600px) and (max-device-width: 768px) {
+    .player-wrapper{
+      margin-top:100px;
+    }
+  }

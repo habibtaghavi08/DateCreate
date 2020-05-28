@@ -1,14 +1,7 @@
 const db = require("../models");
 
-// Defining methods for the booksController
+// Defining methods for the usersController
 module.exports = {
-  // findAll: function(req, res) {
-  //   db.Book
-  //     .find(req.query)
-  //     .sort({ date: -1 })
-  //     .then(dbModel => res.json(dbModel))
-  //     .catch(err => res.status(422).json(err));
-  // },
   findUserById: function(req, res) {
     db.User
       .findById(req.params.id)
@@ -23,7 +16,7 @@ module.exports = {
   },
   removeUser: function(req, res) {
     db.User
-      .findById({ _id: req.params.id })
+      .findById({_id: req.params.id})
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

@@ -60,6 +60,7 @@ class Registration extends React.Component {
     render() {
         console.log(this.state)
         return (<div className="card bg-light">
+
         <article className="card-body mx-auto">
             <h4 className="card-title mt-3 text-center">Create Account</h4>
             <p className="text-center">Get started with your free account</p>
@@ -127,7 +128,7 @@ class Registration extends React.Component {
        
         
         </div>) 
-        
+
 
     }
 }

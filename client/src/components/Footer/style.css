@@ -1,23 +1,14 @@
-  html,
-  body {
-    margin:0;
-    padding: 0;
-    height: 100%;
-  }
-
-  
-  .footer {
-    position: fixed;
+  .main-footer {
+    margin-top: 20px;
     bottom: 0;
     width: 100%;
     border-top: 8px solid #4ec5c1;
     height: 100px;
     background-color: black;
-    text-align: center;
+    
   }
-  
 
-  /*---------Media Query All - 599px --------------*/
+   /*---------Media Query All - 599px --------------*/
 
 @media all and (max-device-width: 599px) {
   .toggle-.footer{

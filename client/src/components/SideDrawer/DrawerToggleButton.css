@@ -24,26 +24,28 @@
 
 /*---------Media Query All - 599px --------------*/
 
-@media all and (max-device-width: 599px) {
+@media all and (max-device-width: 600px) {
     .toggle-button{
         display: flex;
-        margin-left: 17px;
+        margin-left: 20px;
         margin-right: 0;
     }
 }
 
 /*---------Media Query 600px - 799px --------------*/
 
-@media (min-width: 600px) and (max-device-width: 799px) {
+@media (min-width: 601px) and (max-device-width: 767px) {
     .toggle-button{
         display: flex;
+        margin-left: 20px;
     }
 }
 
 /*---------Media Query 800px 1455px--------------*/
 
-@media (min-width: 800px) and (max-device-width: 1455px) {
+@media (min-width: 768px) and (max-device-width: 992px) {
     .toggle-button{
         display: flex;
+        margin-left: 20px;
     }
 }
