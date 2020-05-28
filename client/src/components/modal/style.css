@@ -1,5 +1,5 @@
 .btn {
-    float:right;
+    float: right;
     background-color: black;
     color: #EC576B;
     font-weight: bold;
@@ -73,4 +73,10 @@ font-weight: bold;
 
 .close{
     color: #4ec5c1;
+}
+
+.tosFont{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 80%;
+
 }
