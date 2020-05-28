@@ -15,7 +15,7 @@ class Results extends Component {
 
     render() {
         return (
-            <Container fluid>
+            <Container fluid className="results-container">
                 <Row>
                     <Col size="md-10">
                         <Jumbotron>
@@ -29,14 +29,29 @@ class Results extends Component {
                     </Col>
                 </Row>
                 <Row>
+
                     <Col size="md-5">
                         <div className="resturaunt-container">
                             <h1>Resturaunt Selection:</h1>
+                            <h3 className="rest-budget">Date Budget: </h3>
+                            <h3 className="rest-name">Resturaunt Name: </h3>
+                            <h3 className="rest-type">Cuisine Type: </h3>
+                            <h3 className="rest-rating">Rating: </h3>
+                            <h3 className="rest-pic"></h3>
+                            <h3 className="rest-location">Location: </h3>
+                            <h3 className="rest-reviews"></h3>
                         </div>
                     </Col>
                     <Col size="md-5">
                         <div className="activity-container">
                             <h1>Activity Selection:</h1>
+                            <h3 className="act-budget">Activity Budget: </h3>
+                            <h3 className="act-name">Resturaunt Name: </h3>
+                            <h3 className="act-type">Cuisine Type: </h3>
+                            <h3 className="act-rating">Rating: </h3>
+                            <h3 className="act-pic"></h3>
+                            <h3 className="act-location">Location: </h3>
+                            <h3 className="act-reviews"></h3>
                         </div>
                     </Col>
                     <Col size="md-2">
