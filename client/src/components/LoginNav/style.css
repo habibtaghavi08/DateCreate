@@ -67,6 +67,22 @@
     
 }
 
+.link-button {
+    background-color: transparent;
+    color: #4EC5C1;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.link-button:hover,
+.link-button:focus {
+text-decoration: none;
+}
+
+
 /*---------Media Query All - 599px --------------*/
 
 @media all and (max-device-width: 600px) {

@@ -26,6 +26,7 @@ function Home() {
                                 multiple websites.
                                 </p>
                                 <h2>With DateCreate every date can be an adventure!</h2>
+                                <br></br>
                             </div>
                         </Col>
                         <Col size="md-7">
