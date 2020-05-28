@@ -13,9 +13,11 @@ import Backdrop from "./components/Backdrop/Backdrop"
 import Reggie from "./pages/Registration";
 import Results from "./pages/Results";
 import Footer from "./components/Footer";
+import { ThemeProvider } from "react-bootstrap";
 import "./app.css"
 import Planned from './pages/Planned';
 import Completed from "./pages/Completed";
+
 
 
 
@@ -89,7 +91,10 @@ const PrivateRoute = ({component: Component, ...rest}) => (
 
 class App extends Component {
   state = {
-    sideDrawerOpen: false
+    sideDrawerOpen: false,
+    userName: "user",
+    password: "password1"
+    
   };
 
 
@@ -102,6 +107,46 @@ class App extends Component {
   backdropClickHandler = () => {
     this.setState({sideDrawerOpen: false});
   }
+ 
+  checkInformation = (input, pw)=>{
+    // if username's password does not equal the input show does not match
+    //else show landing page
+  if (input ==! pw ){
+    alert("The password is not correct")
+     }
+   
+   else{
+    window.location.replace("http://localhost/3000/landing")
+    }
+  }
+
+  validateLogin = () => {
+    console.log("this function is working")
+    // var newUser = {
+    //   userName: //unsure how to grab username from input box at this moment
+    //   password: //get password from input box,
+    //   email: //get email from input box
+    //   phoneNumber: //get phoneNumber from input box
+    //   age: //get age from input
+    // };
+    // console.log(newUser);
+
+    // $.post("/user/new", newUser)
+    //   // On success, run the following code
+    //   .then(function () {
+    //     console.log("user created");
+
+    //     $("#userName").val("");
+    //     $("#password").val("");
+    //     $("#email").val("");
+    //     $("#phoneNumber").val("");
+    //     $("age").val("")
+
+    //     alert("User account created successfully!");
+    
+  }
+
+
 
   //===================================================================================
 
@@ -112,29 +157,31 @@ class App extends Component {
       backdrop = <Backdrop click={this.backdropClickHandler} />
     }
     return (
-      <div className="page-container">
-        <div className="content-wrap">
-          <Router>
-            <div style={{height: '100%'}}>
-              <AuthButton drawerClickHandler={this.drawerToggleClickHandler} />
-              <SideDrawer show={this.state.sideDrawerOpen} />
-              {backdrop}
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <PrivateRoute exact path="/landing" component={Landing} />
-                <Route exact path="/about" component={About} />
-                <PrivateRoute exact path="/profile" component={Profile} />
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/loginredirect" component={LoginRedirect} />
-                <Route exact path="/reggie" component={Reggie} />
 
-                <Route exact path="/results" component={Results} />
-                <Route exact path="/planned" component={Planned} />
-                <Route exact path="/completed" component={Completed} />
-                <Route exact path="/repo" component={() => {window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null;}} />
-                <Route exact path="/tos" component={() => {window.location.href = './component/modal'; return null;}} />
+       <div className="page-container">
+      <div className="content-wrap">
+      <Router>
+        <div style={{ height: '100%' }}>
+          <Nav drawerClickHandler={this.drawerToggleClickHandler} />
+          <SideDrawer show={this.state.sideDrawerOpen} />
+          {backdrop}
 
-                <Route component={NoMatch} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/landing" component={Landing} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/login" component={Login} 
+            userName = {this.state.userName} 
+            password = {this.state.password} 
+            checkInformation = {this.checkInformation} />
+            <Route exact path="/reggie" component={Reggie} 
+            validateRegistration = {this.validateRegistration} />
+            <Route exact path="/repo" component={() => { window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null; }} />
+            <Route exact path="/tos" component={() => { window.location.href = './component/modal'; return null; }} />
+            <Route component={NoMatch} />
+          
+                
               </Switch>
             </div>
           </Router>
