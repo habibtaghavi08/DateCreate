@@ -1,5 +1,6 @@
 import React from 'react';
-import ActivityResults from './ActivitySearchResults'
+import ActivityResults from './ActivityResults'
+
 
 
 export default function ActivitySearchResults(props) {
@@ -15,7 +16,7 @@ export default function ActivitySearchResults(props) {
     let randomact = actdata[actnum]
     console.log(randomact)
     let selectedact = [randomact]
-    const ActivitySearchResults = selectedact.map(a => <ActivityResults event={a} />)
+    const ActivitySearchResults = selectedact.map(a => <ActivityResults key={actdata} event={a} />)
 
     return (
         <div>

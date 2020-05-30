@@ -13,8 +13,12 @@ import ActivitySearchResults from "../components/ActivitySearchResults/ActivityS
 
 export default function Search() {
     const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(2, "Breakfast", 16093, "nashville,tn")
-    const [events, amounteventsResults, searcheventsParams, seteventsSearchParams] = useActivitySearch("active", 32186, "nashville,tn")
+    const [events, amounteventsResults, searcheventsParams, seteventsSearchParams] = useActivitySearch("film", 40000, "nashville,tn", 50)
 
+
+    function refreshPage() {
+        window.location.reload(false);
+    }
 
     return (
         <Container fluid className="results-container">
@@ -68,9 +72,9 @@ export default function Search() {
                         <SaveCompletedBtn>
                             I'm Going on This Date!
                             </SaveCompletedBtn>
-                        <ShuffleBtn>
+                        <ShuffleBtn onClick={refreshPage}>
                             Show Me A Different Date
-                            </ShuffleBtn>
+                        </ShuffleBtn>
                     </div>
                 </Col>
             </Row>

@@ -1,10 +1,10 @@
 import {useState, useEffect} from 'react';
 import * as api from './api'
 
-function useActivitySearch(categories, radius, location) {
+function useActivitySearch(categories, radius, location, limit) {
     const [events, setEvents] = useState([]);
     const [amounteventResults, seteventAmountResults] = useState();
-    const [searcheventParams, seteventSearchParams] = useState({categories, radius, location});
+    const [searcheventParams, seteventSearchParams] = useState({categories, radius, location, limit});
 
     useEffect(() => {
         setEvents([]);

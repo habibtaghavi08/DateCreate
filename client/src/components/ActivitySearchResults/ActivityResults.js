@@ -2,7 +2,7 @@ import React from 'react';
 import "./activityresult.css";
 
 export default function ActivityResults(props) {
-    console.log(props.events)
+    console.log(props.event)
     const a = props.event;
     if (!a) {
         return (<div />);
@@ -12,6 +12,7 @@ export default function ActivityResults(props) {
     return (
         <div className="activity-details">
             <h3 className="act-name">Activity Name: {a.name}</h3>
+            <h3 className="act-category">Catergory: {a.category}</h3>
             <h3 className="act-cost">Cost: {a.cost}</h3>
             <h3 className="act-venue">Venue Name: {a.business_id}</h3>
             <h3 className="act-location">Location: {a.location.addres1} {a.location.city}, {a.location.state} {a.location.zip_code} </h3>
