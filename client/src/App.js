@@ -91,10 +91,7 @@ const PrivateRoute = ({component: Component, ...rest}) => (
 
 class App extends Component {
   state = {
-    sideDrawerOpen: false,
-    userName: "user",
-    password: "password1"
-
+    sideDrawerOpen: false
   };
 
 
@@ -108,17 +105,6 @@ class App extends Component {
     this.setState({sideDrawerOpen: false});
   }
 
-  checkInformation = (input, pw) => {
-    // if username's password does not equal the input show does not match
-    //else show landing page
-    if (input == !pw) {
-      alert("The password is not correct")
-    }
-
-    else {
-      window.location.replace("http://localhost/3000/landing")
-    }
-  }
 
   validateLogin = () => {
     console.log("this function is working")
