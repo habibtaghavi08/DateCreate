@@ -13,7 +13,7 @@ function Home() {
                             <div className="app-pitch">
                                 <h1>DateCreate: </h1>
                                 <h2>Generating Unique Dates one click at a time!</h2>
-                                <p>If you've ever tried to plan a romatic night out with your
+                                <p>If you've ever tried to plan a romantic night out with your
                                 special someone, or even a casual night out with friends, you
                                 know how hard it can be to choose a great restaurant or to agree
                                 on the perfect weekend activity.
@@ -39,6 +39,12 @@ function Home() {
             </main>
 
         </div>
+
+
+
+
+
+
 
     );
 }
