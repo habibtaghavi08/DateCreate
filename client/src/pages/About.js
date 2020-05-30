@@ -47,11 +47,11 @@ function About() {
                         <div className="about-us">
                             <h1>TEAM OVER-REACTORS</h1>
 
-                             <h3><a>CELESTE LEWIS</a></h3>
-                             <h3><a>MIKE LUSSO</a></h3>
-                             <h3><a>DANNIELLE TAYLOR</a></h3>
-                             <h3><a>TRAVIS BUNN</a></h3>
-                             <h3><a>SEYED HABIB TAGHAVI</a></h3>
+                             <h3><a>CELESTE LEWIS - SOFTWARE ENGINEER</a></h3>
+                             <h3><a>MIKE LUSSO -  SOFTWARE ENGINEER</a></h3>
+                             <h3><a>DANNIELLE TAYLOR - SOFTWARE ENGINEER</a></h3>
+                             <h3><a>TRAVIS BUNN - SOFTWARE ENGINEER</a></h3>
+                             <h3><a>SEYED HABIB TAGHAVI - SOFTWARE ENGINEER</a></h3>
 
                              <h3><a>SEYED HABIB TAGHAVI - REPO OWNER / PROJECT MANGER / TEAM LEAD</a></h3>
                              <h3><a>DANNIELLE TAYLOR - TEAM LEAD</a></h3>
