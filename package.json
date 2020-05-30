@@ -34,6 +34,7 @@
     "react-dom": "^16.13.1",
     "react-iframe": "^1.8.0",
     "react-player": "^2.0.1",
+    "react-rating": "^2.0.5",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "use-react-router": "^1.0.7",

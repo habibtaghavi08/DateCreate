@@ -4,13 +4,16 @@ import Jumbotron from "../components/Jumbotron";
 import {Col, Row, Container} from "../components/Grid";
 import {CompletedBtn, PlannedDateBtn, SaveCompletedBtn, SavePlannedDateBtn, ShuffleBtn} from "../components/Form";
 import useBusinessSearch from "../utils/hooks/yelp-api/useBusinessSearch";
-import BusinessSearchResults from "../SearchResults/BusinessSearchResults"
+import BusinessSearchResults from "../components/SearchResults/BusinessSearchResults"
 import "./css/results.css"
+import useActivitySearch from "../utils/hooks/yelp-api/useActivitySearch";
+import ActivitySearchResults from "../components/ActivitySearchResults/ActivitySearchResults";
 //import Form from 'react-bootstrap/Form';
 
 
 export default function Search() {
-    const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(2, "Breakfast", 16093, 37214)
+    const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(2, "Breakfast", 16093, "nashville,tn")
+    const [activities, amountActResults, searchActParams, setActSearchParams] = useActivitySearch("active", 32186, "nashville,tn")
 
 
     return (
@@ -37,14 +40,8 @@ export default function Search() {
                 </Col>
                 <Col size="md-5">
                     <div className="activity-container">
-                        <h1>Activity Selection:</h1>
-                        <h3 className="act-budget">Activity Budget: </h3>
-                        <h3 className="act-name">Resturaunt Name: </h3>
-                        <h3 className="act-type">Cuisine Type: </h3>
-                        <h3 className="act-rating">Rating: </h3>
-                        <h3 className="act-pic">Activity Pic</h3>
-                        <h3 className="act-location">Location: </h3>
-                        <h3 className="act-reviews">Activity Reviews: </h3>
+                        <h1>Activity Selection: </h1>
+                        <ActivitySearchResults activities={activities} />
                     </div>
                 </Col>
                 <Col size="md-2">
