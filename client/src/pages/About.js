@@ -38,10 +38,30 @@ function About() {
               </main> 
           </div>
                   
-                          
-                        
-                        
-                       
+          <div class name = "about-us-2">
+ 
+        
+            <Container fluid>
+                <Row>
+                    <Col size="md-12">
+                        <div className="about-us">
+                            <h1>TEAM OVER-REACTORS</h1>
+                             <h3><a>CELESTE LEWIS</a></h3>
+                             <h3><a>MIKE LUSSO</a></h3>
+                             <h3><a>DANNIELLE TAYLOR</a></h3>
+                             <h3><a>TRAVIS BUNN</a></h3>
+                             <h3><a>SEYED HABIB TAGHAVI</a></h3>
+                             
+                             
+                             
+                                </div>
+                            </Col>
+                      </Row>
+                 </Container>
+               
+          
+              
+     </div>
                    
                               
 
