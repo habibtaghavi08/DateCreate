@@ -13,7 +13,7 @@ import ActivitySearchResults from "../components/ActivitySearchResults/ActivityS
 
 export default function Search() {
     const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(2, "Breakfast", 16093, "nashville,tn")
-    const [activities, amountActResults, searchActParams, setActSearchParams] = useActivitySearch("active", 32186, "nashville,tn")
+    const [events, amounteventsResults, searcheventsParams, seteventsSearchParams] = useActivitySearch("active", 32186, "nashville,tn")
 
 
     return (
@@ -39,9 +39,9 @@ export default function Search() {
                     </div>
                 </Col>
                 <Col size="md-5">
-                    <div className="activity-container">
+                    <div className="activity-container" >
                         <h1>Activity Selection: </h1>
-                        <ActivitySearchResults activities={activities} />
+                        <ActivitySearchResults events={events} />
                     </div>
                 </Col>
                 <Col size="md-2">

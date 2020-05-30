@@ -3,7 +3,7 @@ import "./searchresult.css"
 
 
 export default function SearchResult(props) {
-    console.log(props.businesses)
+    console.log(props.business)
     const b = props.business;
     if (!b) {
         return (<div />);

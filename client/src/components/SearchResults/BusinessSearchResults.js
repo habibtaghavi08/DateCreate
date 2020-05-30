@@ -6,7 +6,6 @@ import SearchResult from './SearchResult/SearchResult'
 
 
 export default function BusinessSearchResults(props) {
-    console.log(props.businesses)
     if (!props.businesses || !props.businesses.length) {
         return (<div />);
     }
