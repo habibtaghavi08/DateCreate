@@ -1,32 +1,32 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 // import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
+import {Link} from "react-router-dom";
+import {Col, Row, Container} from "../components/Grid";
 // import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn, ProfileBtn, CompletedBtn, PlannedDateBtn } from "../components/Form";
+import {Input, TextArea, FormBtn, ProfileBtn, CompletedBtn, PlannedDateBtn} from "../components/Form";
 import Form from 'react-bootstrap/Form';
 import "../components/Jumbotron/style.css";
 import ReactDom from "react-dom";
-import { Redirect, NavLink } from "react-router-dom";
+import {Redirect, NavLink} from "react-router-dom";
 
 
 // just making a change // 
 class Dates extends Component {
   state = {
-    datecost: "",
-    restaurantType: [],
-    restRating: "",
-    distance: [],
-    zipcode: "",
+    datecost: "2",
+    restaurantType: [3],
+    restRating: "4",
+    distance: [16093],
+    zipcode: "37214",
     redirect: false,
   };
   constructor(props) {
     super(props);
     this.state = {
       value: "Chop House",
-      restaurants: [{ id: "1", rest: "Afghan" }, { id: "2", rest: "African" }, { id: "3", rest: "American(Traditional)" }, { id: "4", rest: "Armenian" }, { id: "5", rest: "Beer Hall" }, { id: "6", rest: "Beer Garden" }, { id: "7", rest: "Bistro" }, { id: "8", rest: "Brazilian" }, { id: "9", rest: "Breakfast & Brunch" }, { id: "10", rest: "Canadian" }, { id: "11", rest: "Cafe" }, { id: "12", rest: "Coffee House" }, { id: "13", rest: "Caribbean" }, { id: "14", rest: "Dinner Theater" }, { id: "15", rest: "Food Court" }, { id: "16", rest: "French" }, { id: "17", rest: "Ethiopian" }, { id: "18", rest: "German" }, { id: "19", rest: "Italian" }, { id: "20", rest: "Japanese" }, { id: "21", rest: "Mexican" }, { id: "22", rest: "Middle Eastern" }, { id: "23", rest: "Pizza" }, { id: "24", rest: "Persian/Iranian" }, { id: "25", rest: "Chop House" }, { id: "26", rest: "SteakHouse" }, { id: "27", rest: "Sushi Bar" }, { id: "28", rest: "Thai" }, { id: "29", rest: "Not Vegetarian" }, { id: "30", rest: "Ok Vegetarian" }, { id: "31", rest: "Waffles" }]
+      restaurants: [{id: "1", rest: "Afghan"}, {id: "2", rest: "African"}, {id: "3", rest: "American(Traditional)"}, {id: "4", rest: "Armenian"}, {id: "5", rest: "Beer Hall"}, {id: "6", rest: "Beer Garden"}, {id: "7", rest: "Bistro"}, {id: "8", rest: "Brazilian"}, {id: "9", rest: "Breakfast & Brunch"}, {id: "10", rest: "Canadian"}, {id: "11", rest: "Cafe"}, {id: "12", rest: "Coffee House"}, {id: "13", rest: "Caribbean"}, {id: "14", rest: "Dinner Theater"}, {id: "15", rest: "Food Court"}, {id: "16", rest: "French"}, {id: "17", rest: "Ethiopian"}, {id: "18", rest: "German"}, {id: "19", rest: "Italian"}, {id: "20", rest: "Japanese"}, {id: "21", rest: "Mexican"}, {id: "22", rest: "Middle Eastern"}, {id: "23", rest: "Pizza"}, {id: "24", rest: "Persian/Iranian"}, {id: "25", rest: "Chop House"}, {id: "26", rest: "SteakHouse"}, {id: "27", rest: "Sushi Bar"}, {id: "28", rest: "Thai"}, {id: "29", rest: "Not Vegetarian"}, {id: "30", rest: "Ok Vegetarian"}, {id: "31", rest: "Waffles"}]
     };
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
@@ -46,7 +46,7 @@ class Dates extends Component {
   };
 
   handleInputChange = event => {
-    const { name, value } = event.target;
+    const {name, value} = event.target;
     this.setState({
       [name]: value
     });
@@ -55,11 +55,13 @@ class Dates extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.zipcode && this.state.author) {
+    if (this.state.zipcode) {
       API.save({
         zipcode: this.state.zipcode,
-        author: this.state.author,
-        synopsis: this.state.synopsis
+        restaurantType: this.state.restaurantType,
+        budget: this.state.datecost,
+        distance: this.state.distance
+
       })
         .then(res => this.loadDates())
         .catch(err => console.log(err));
@@ -100,7 +102,7 @@ class Dates extends Component {
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Pick the Distance to Search</Form.Label>
-                <Form.Control name="distance" as="select"  onChange={this.handleInputChange.bind(this)}> 
+                <Form.Control name="distance" as="select" onChange={this.handleInputChange.bind(this)}>
                   <option>5 miles</option>
                   <option>10 miles</option>
                   <option>20 miles</option>
@@ -121,7 +123,7 @@ class Dates extends Component {
                     label={`Night Time Date ${type}`}
                     id={`disabled-default-${type}`}
                   />
-                </div> ))}
+                </div>))}
               <Input
                 value={this.state.zipcode}
                 onChange={this.handleInputChange}
@@ -131,15 +133,15 @@ class Dates extends Component {
           </Col>
           <Col size="md-5">
             <form >
-            <label>Pick your Restaurant Food Style  </label>
+              <label>Pick your Restaurant Food Style  </label>
               <br></br>
               <select>
                 {this.state.restaurants.map(rest => (<option key={rest.id} value={rest.rest}>
                   {rest.rest}
                 </option>))}
               </select>
-                  <br></br>
-                  <br></br>
+              <br></br>
+              <br></br>
               {['checkbox',].map((type) => (
                 <div key={`default-${type}`} className="mb-3">
                   <Form.Check
@@ -153,9 +155,9 @@ class Dates extends Component {
                     id={`default-${type}`}
                   />
                 </div>))}
-                <div className="btn-group-toggle, Bobby" data-toggle="buttons">
+              <div className="btn-group-toggle, Bobby" data-toggle="buttons">
                 <label className="btn btn-secondary active">
-                  <input type="checkbox" checked autocomplete="off"/> Checked
+                  <input type="checkbox" checked autocomplete="off" /> Checked
                 </label>
               </div>
               {/* <TextArea
