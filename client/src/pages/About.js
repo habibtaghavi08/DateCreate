@@ -1,7 +1,6 @@
 import React from "react";
-import "../css/about.css"
+import "./css/about.css"
 import { Col, Row, Container } from "../components/Grid"
-import { DropdownDivider } from "react-bootstrap/Dropdown";
 
 
 function About() {

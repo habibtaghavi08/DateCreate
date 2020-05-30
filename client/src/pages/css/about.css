@@ -1,13 +1,18 @@
+.main{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
 h1{
- font-style: bold;
- color: crimson;
+    font-family: 'Wendy One', sans-serif; 
+    font-size: 60px;
 
 }
 
-h2{ font-style: bold
-    
-
-
+h2{ 
+   
+    font-family: 'Wendy One', sans-serif; 
+    font-size: 60px;
 }
 
 p{
