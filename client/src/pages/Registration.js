@@ -1,5 +1,7 @@
 import React from "react"
 import "./registration.css"
+import API from "../utils/API"
+const path = require("path");
 
 class Registration extends React.Component {
 
@@ -23,29 +25,16 @@ class Registration extends React.Component {
           phoneNumber: this.state.phoneNumber, //get phoneNumber from input box
           age: this.state.age //get age from input
         };
-        // var newUser = {
-        //     userName: "Celeste",//unsure how to grab username from input box at this moment
-        //     password:1234, //get password from input box,
-        //     email: "thisisafakeemail@gmail.com", //get email from input box
-        //     phoneNumber:"44444444", //get phoneNumber from input box
-        //     age:23 //get age from input
-        //   };
-        console.log(newUser);
-    
-        //  $.post("/user/new", newUser)
-        //    // On success, run the following code
-        //    .then(function () {
-        //      console.log("user created");
-    
-        //      $("#userName").val("");
-        //      $("#password").val("");
-        //      $("#email").val("");
-        //      $("#phoneNumber").val("");
-        //      $("age").val("");
-    
-            alert("User account created successfully!");
-            window.location.replace("http://localhost:3000/reggie")
-            console.log(this.userName)
+
+        //console.log(newUser);
+        //console.log(API)
+        if (this.state.userName && this.state.password){
+            API.createUser(newUser)
+
+        }
+        alert("User account created successfully!");
+        window.location.replace((path.join(__dirname, "/landing")))
+        console.log(this.userName)
            //}
            }
 
@@ -100,9 +89,10 @@ class Registration extends React.Component {
                 </div>
                 <select name = "age" className="form-control" id = "age" onChange = {this.handleInputChange.bind(this)}>
                     <option defaultValue=""> Select age</option>
-                    <option>6</option>
-                    <option>72</option>
-                    <option>112</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>20+</option>
                 </select>
                 
             </div>
