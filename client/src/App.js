@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch, Redirect, withRouter } from "react-router-dom";
+import React, {Component} from "react";
+import {BrowserRouter as Router, Route, Switch, Redirect, withRouter} from "react-router-dom";
 import Home from "./pages/Home";
 import Landing from "./pages/Filter";
 import About from "./pages/About";
@@ -13,7 +13,7 @@ import Backdrop from "./components/Backdrop/Backdrop"
 import Reggie from "./pages/Registration";
 import Results from "./pages/Results";
 import Footer from "./components/Footer";
-import { ThemeProvider } from "react-bootstrap";
+import {ThemeProvider} from "react-bootstrap";
 import "./app.css"
 import Planned from './pages/Planned';
 import Completed from "./pages/Completed";
@@ -36,7 +36,7 @@ const loginAuth = {
 }
 
 
-const AuthButton = withRouter(({ history }) => (
+const AuthButton = withRouter(({history}) => (
   loginAuth.isAuthenticated === true
     ? <LoginNav />
     : <Nav />
@@ -58,8 +58,8 @@ class LoginRedirect extends React.Component {
     })
   }
   render() {
-    const { rediretToReferrer } = this.state
-    const { from } = this.props.location.state || { from: { pathname: "/" } }
+    const {rediretToReferrer} = this.state
+    const {from} = this.props.location.state || {from: {pathname: "/"}}
 
     if (rediretToReferrer === true) {
       return (
@@ -74,13 +74,13 @@ class LoginRedirect extends React.Component {
   }
 }
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
+const PrivateRoute = ({component: Component, ...rest}) => (
   <Route {...rest} render={(props) => (
     loginAuth.isAuthenticated === true
       ? <Component {...props} />
       : <Redirect to={{
         pathname: "/loginredirect",
-        state: { from: props.location }
+        state: {from: props.location}
       }} />
   )} />
 )
@@ -97,12 +97,12 @@ class App extends Component {
 
   drawerToggleClickHandler = () => {
     this.setState((prevState) => {
-      return { sideDrawerOpen: !prevState.sideDrawerOpen };
+      return {sideDrawerOpen: !prevState.sideDrawerOpen};
     });
   };
 
   backdropClickHandler = () => {
-    this.setState({ sideDrawerOpen: false });
+    this.setState({sideDrawerOpen: false});
   }
 
 
@@ -147,7 +147,7 @@ class App extends Component {
       <div className="page-container">
         <div className="content-wrap">
           <Router>
-            <div style={{ height: '100%' }}>
+            <div style={{height: '100%'}}>
               <Nav drawerClickHandler={this.drawerToggleClickHandler} />
               <SideDrawer show={this.state.sideDrawerOpen} />
               {backdrop}
@@ -163,10 +163,11 @@ class App extends Component {
                   checkInformation={this.checkInformation} />
                 <Route exact path="/planned" component={Planned} />
                 <Route exact path="/completed" component={Completed} />
+                <Route exact path="/results" component={Results} />
                 <Route exact path="/reggie" component={Reggie}
                   validateRegistration={this.validateRegistration} />
-                <Route exact path="/repo" component={() => { window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null; }} />
-                <Route exact path="/tos" component={() => { window.location.href = './component/modal'; return null; }} />
+                <Route exact path="/repo" component={() => {window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null;}} />
+                <Route exact path="/tos" component={() => {window.location.href = './component/modal'; return null;}} />
                 <Route component={NoMatch} />
 
 
