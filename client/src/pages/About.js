@@ -29,7 +29,7 @@ function About(){
 <p>DATE CREATE! Where Every Date Is An Adventure!</p>
 
               
-                                                    <h1>DATE CREATE</h1>
+                                                    
                      
                             
                 <h1>TEAM OVER-REACTORS</h1>
@@ -39,9 +39,11 @@ function About(){
                 <h2><a>DANNIELLE TAYLOR - SOFTWARE ENGINEER | WEB DEVELOPMENT</a></h2>
                 <h2><a>TRAVIS BUNN - SOFTWARE ENGINEER | WEB DEVELOPMENT</a></h2>
                 <h2><a>SEYED HABIB TAGHAVI - SOFTWARE ENGINEER | WEB DEVELOPMENT</a></h2>
-                <h2><a>SEYED HABIB TAGHAVI - REPO OWNER | PROJECT MANGER | TEAM LEAD</a></h2>
-                <h2><a>DANNIELLE TAYLOR - TEAM LEAD</a></h2>
-                <h2><a>MIKE LUSSO - TEAM LEAD</a></h2>
+                   <br>
+                   </br>
+                <h3><a>SEYED HABIB TAGHAVI - REPO OWNER | PROJECT MANGER | TEAM LEAD</a></h3>
+                <h3><a>DANNIELLE TAYLOR - TEAM LEAD</a></h3>
+                <h3><a>MIKE LUSSO - TEAM LEAD</a></h3>
                                 
                                  </div>                       
                             </Col>

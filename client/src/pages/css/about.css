@@ -5,17 +5,27 @@
 
 h1{
     font-family: 'Wendy One', sans-serif; 
-    font-size: 60px;
-
+     font-size: 100px;
+    text-shadow:#EC576B 2px 2px 8px; 
+    
+    
 }
 
 h2{ 
-   
-    font-family: 'Wendy One', sans-serif; 
-    font-size: 60px;
+   font-family: 'Wendy One', sans-serif; 
+   font-size: 40px;
+   text-shadow: cyan 2px 2px 3px;
 }
 
-p{
-contain: content;
+h3{ 
+    font-family: 'Wendy One', sans-serif; 
+    text-shadow: cyan 1px 2px 2px;
+    font-size: 30px;
+ }
 
+p{
+contain: content;  
+font-size: 25px;
+font-weight: bold;
+margin-top: 2px;
 }
