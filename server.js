@@ -19,7 +19,9 @@ app.use(routes);
 
 // Connect to the Mongo DB
 // TODO: rename the database to something that will relate to our app
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/datecreate");
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/DateCreateDB");
+
 
 // Start the API server
 app.listen(PORT, function() {
