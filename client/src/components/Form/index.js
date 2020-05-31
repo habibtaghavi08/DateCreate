@@ -6,7 +6,7 @@ import {NavLink, Link } from "react-router-dom";
 
 export function Input(props) {
   return (
-    <div className="form-group">
+    <div className="form-group filterText">
       <input className="form-control" {...props} />
     </div>
   );
