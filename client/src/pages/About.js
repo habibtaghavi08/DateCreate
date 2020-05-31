@@ -36,11 +36,11 @@ function About(){
               
                 <h2><a>Celeste Lewis - Software Engineer | Web Development</a></h2>
                 <h2><a>Mike Lusso - Software Engineer | Web Development </a></h2>
-                <h2><a>Dannielle Taylor - Software Engineer | Web Development /a></h2>
+                <h2><a>Dannielle Taylor - Software Engineer | Web Development </a></h2>
                 <h2><a>Travis Bunn - Software Engineer | Web Development</a></h2>
                 <h2><a>Seyed Habib Taghavi - Software Engineer | Web Development</a></h2>
-                   <br>
-                   </br>
+                  
+                   <br/>
                 <h3><a>Seyed Habib Taghavi - Repo Owner | Project Manager | Team Lead</a></h3>
                 <h3><a>Dannielle Taylor - Team Lead </a></h3>
                 <h3><a>Mike Lusso - Team Lead</a></h3>
