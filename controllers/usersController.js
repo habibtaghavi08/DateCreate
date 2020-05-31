@@ -2,13 +2,15 @@ const db = require("../models");
 
 // Defining methods for the usersController
 module.exports = {
-  findUserById: function(req, res) {
+
+findUserByUserName: function(req, res) {
     db.User
-      .findById(req.params.id)
+      .findByName(req.params.userName)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   createUser: function(req, res) {
+    console.log(req.body)
     db.User
       .create(req.body)
       .then(dbModel => res.json(dbModel))

@@ -1,12 +1,13 @@
 .jumboTxt {
     font-family: 'Wendy One', sans-serif;
     font-size: 200%;
+    margin: 17px;
 }
 
 .manTxt {
     font-family: 'Wendy One', sans-serif;
     font-size: 115%;
-    letter-spacing: .1em;
+    letter-spacing: .01em;
     padding-top: 15px;
 }
 
@@ -16,6 +17,7 @@
 
 .results {
     height: 200px;
+ 
 }
 
 .rDates {
@@ -40,6 +42,7 @@
     border-color: #4EC5C1;
     border-width: 7px;
     border-radius: 5px;
+    margin: 15px;
 }
 
 .btn {
@@ -48,8 +51,8 @@
     color: #EC576B;
     font-weight: bold;
     font-family: 'Wendy One', sans-serif;
-    letter-spacing: .05em;
-    border-style: solid;
+    letter-spacing: .5em;
+    border-style: solid ;
     border-color: #4EC5C1;
     border-width: 4px;
     margin-top: 20px;
@@ -76,3 +79,4 @@ Form.Group {
 
     margin: 4px;
 }
+
