@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import Planned from "../components/Planned"
 // import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import { Col, Row, Container } from "../components/Grid";
 // import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn, ProfileBtn, CompletedBtn, PlannedDateBtn } from "../components/Form";
+import {  ProfileBtn, CompletedBtn, PlannedDateBtn } from "../components/Form";
 import "../components/Jumbotron/style.css";
 import ReactDom from "react-dom";
 import { Redirect, NavLink } from "react-router-dom";
@@ -69,16 +70,16 @@ class PlanDates extends Component {
 
                         </form>
                     </Col>
-                    <Col size="md-1">
+                    <Col size="md-2">
                         <form >
                             <Jumbotron>
-                           <h4>Avg Score of Date</h4></Jumbotron>
+                           <p className="rDates-1">Avg Score of Date</p ></Jumbotron>
                         </form>
                     </Col>
-                    <Col size="md-5">
+                    <Col size="md-4">
                         <form >
                             <Jumbotron>
-                            <h3>User Comments</h3></Jumbotron>
+                            <p className="rDates">User Comments</p></Jumbotron>
 
                         </form>
                     </Col>
@@ -91,6 +92,20 @@ class PlanDates extends Component {
                             onClick={this.handlePlanClk}>Planned Dates</PlannedDateBtn>
                     </Col>
                 </Row>
+                <Row>
+                    <Col size="md-12" className= "plResults">
+                        <Planned>
+
+
+                        </Planned>
+           
+                    </Col>
+                </Row>
+
+
+
+
+
             </Container>
         );
     }

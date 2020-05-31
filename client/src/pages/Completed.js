@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 // import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
+import Completed from "../components/Completed"
 import { Col, Row, Container } from "../components/Grid";
 // import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn, ProfileBtn, CompletedBtn, PlannedDateBtn } from "../components/Form";
+import { ProfileBtn, CompletedBtn, PlannedDateBtn } from "../components/Form";
 import "../components/Jumbotron/style.css";
 import ReactDom from "react-dom";
-import { Redirect, NavLink } from "react-router-dom";
+// import { Redirect, NavLink } from "react-router-dom";
 
 
 // just making a change // 
@@ -108,6 +109,28 @@ class CompDates extends React.Component {
                             onClick={this.handlePlanClk}>Planned Dates</PlannedDateBtn>
                     </Col>
                 </Row>
+                <Row>
+                    <Col size="md-12" className= "plResults">
+                        {this.state.dateName.map(date => (
+                            <div className="row" key={date._id}></div>
+                        ))}
+
+                        <Completed
+                        >
+
+
+                        </Completed>
+           
+                    </Col>
+                </Row>
+
+
+
+
+
+
+
+
             </Container>
         );
     }
