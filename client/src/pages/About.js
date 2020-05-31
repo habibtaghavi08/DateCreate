@@ -1,22 +1,24 @@
 import React from "react";
 import "./css/about.css"
-import { Col, Row, Container } from "../components/Grid"
+
+import {Col, Row, Container} from "../components/Grid"
 
 
-function About(){
+function About() {
     return (
         <div className="main">
-        <main>
-            <Container fluid>
-                <Row>
-                    <Col size="lg-12">
-                        <div className="about-us">
-                            <h1>DATE CREATE</h1>
+            <main>
+                <Container fluid>
+                    <Row>
+                        <Col size="lg-12">
+                            <div className="about-us">
+                                <h1>DATE CREATE</h1>
 
- 
+
 <p>If you’ve ever tried to plan a romantic night out with your special someone, or that perfect first date, or even a casual night out with friends,
-   you know how hard it can be to choose a great restaurant or to agree on the perfect weekend activity. Introducing Date Create, 
+   you know how hard it can be to choose a great restaurant or to agree on the perfect weekend activity. Introducing Date Create,
    an all-in-one automated date generator.</p>
+
  
 <p>The Date Create app allows the user to pick from 8 different categories, in order to generate a random date idea. These choices include a restaurant, 
    with specific food ethnicity choices and genres, along with an activity suggestion. Date Create allows the user to filter out, the specific likes
@@ -36,11 +38,11 @@ function About(){
               
                 <h2><a>Celeste Lewis - Software Engineer | Web Development</a></h2>
                 <h2><a>Mike Lusso - Software Engineer | Web Development </a></h2>
-                <h2><a>Dannielle Taylor - Software Engineer | Web Development></a>  </h2>
+                <h2><a>Dannielle Taylor - Software Engineer | Web Development></a></h2>
                 <h2><a>Travis Bunn - Software Engineer | Web Development</a></h2>
                 <h2><a>Seyed Habib Taghavi - Software Engineer | Web Development</a></h2>
                   
-                   <br/>
+                   <br/></br>
                 <h3><a>Seyed Habib Taghavi - Repo Owner | Project Manager | Team Lead</a></h3>
                 <h3><a>Dannielle Taylor - Team Lead </a></h3>
                 <h3><a>Mike Lusso - Team Lead</a></h3>
@@ -55,9 +57,14 @@ function About(){
                   
 
   
+                       
+
+
+
+
+
     );
-  
+
 }
 
-
-  export default About;  
+export default About;

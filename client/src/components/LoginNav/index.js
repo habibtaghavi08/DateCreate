@@ -9,9 +9,11 @@ const Nav = (props) => (
     <div>
       <DrawerToggleButton click={props.drawerClickHandler} />
     </div>
+
     <div className="navbar_logo">
       <img src={Logo} alt="Date Create" class="responsive"></img>
     </div>
+
 
     <div className="nav_items">
       <ul>
@@ -27,9 +29,11 @@ const Nav = (props) => (
       </ul>
     </div>
 
+
     <div className="branding">
       <img src={Branding} alt="Date Create" class="responsive-1"></img>
     </div>
+
 
     <div className="user_nav">
       <ul>
