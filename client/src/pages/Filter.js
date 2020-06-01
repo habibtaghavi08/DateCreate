@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 // import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 // import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
+import {Col, Row, Container} from "../components/Grid";
 import {
   Input,
   FormBtn,
@@ -13,6 +13,7 @@ import {
 } from "../components/Form";
 import Form from "react-bootstrap/Form";
 import "../components/Jumbotron/style.css";
+import {Redirect} from "react-router-dom";
 // import ReactDom from "react-dom";
 // import { Redirect, NavLink } from "react-router-dom";
 
@@ -23,7 +24,7 @@ class Dates extends Component {
     this.state = {
       value: "Chop House",
 
-      restaurants: [{ id: "1", rest: "Afghan" }, { id: "2", rest: "African" }, { id: "3", rest: "American(Traditional)" }, { id: "4", rest: "Armenian" }, { id: "5", rest: "Beer Hall" }, { id: "6", rest: "Beer Garden" }, { id: "7", rest: "Bistro" }, { id: "8", rest: "Brazilian" }, { id: "9", rest: "Breakfast & Brunch" }, { id: "10", rest: "Canadian" }, { id: "11", rest: "Cafe" }, { id: "12", rest: "Coffee House" }, { id: "13", rest: "Caribbean" }, { id: "14", rest: "Dinner Theater" }, { id: "15", rest: "Food Court" }, { id: "16", rest: "French" }, { id: "17", rest: "Ethiopian" }, { id: "18", rest: "German" }, { id: "19", rest: "Italian" }, { id: "20", rest: "Japanese" }, { id: "21", rest: "Mexican" }, { id: "22", rest: "Middle Eastern" }, { id: "23", rest: "Pizza" }, { id: "24", rest: "Persian/Iranian" }, { id: "25", rest: "Chop House" }, { id: "26", rest: "SteakHouse" }, { id: "27", rest: "Sushi Bar" }, { id: "28", rest: "Thai" }, { id: "29", rest: "Not Vegetarian" }, { id: "30", rest: "Ok Vegetarian" }, { id: "31", rest: "Waffles" }],
+      restaurants: [{id: "1", rest: "Afghan"}, {id: "2", rest: "African"}, {id: "3", rest: "American(Traditional)"}, {id: "4", rest: "Armenian"}, {id: "5", rest: "Beer Hall"}, {id: "6", rest: "Beer Garden"}, {id: "7", rest: "Bistro"}, {id: "8", rest: "Brazilian"}, {id: "9", rest: "Breakfast & Brunch"}, {id: "10", rest: "Canadian"}, {id: "11", rest: "Cafe"}, {id: "12", rest: "Coffee House"}, {id: "13", rest: "Caribbean"}, {id: "14", rest: "Dinner Theater"}, {id: "15", rest: "Food Court"}, {id: "16", rest: "French"}, {id: "17", rest: "Ethiopian"}, {id: "18", rest: "German"}, {id: "19", rest: "Italian"}, {id: "20", rest: "Japanese"}, {id: "21", rest: "Mexican"}, {id: "22", rest: "Middle Eastern"}, {id: "23", rest: "Pizza"}, {id: "24", rest: "Persian/Iranian"}, {id: "25", rest: "Chop House"}, {id: "26", rest: "SteakHouse"}, {id: "27", rest: "Sushi Bar"}, {id: "28", rest: "Thai"}, {id: "29", rest: "Not Vegetarian"}, {id: "30", rest: "Ok Vegetarian"}, {id: "31", rest: "Waffles"}],
 
       dateBudget: "",
       restaurantType: "",
@@ -37,7 +38,7 @@ class Dates extends Component {
       dateType: "",
       redirect: false,
     };
-    
+
   }
 
   componentDidMount() {
@@ -56,25 +57,26 @@ class Dates extends Component {
 
   handleResultsClk = (event) => {
     event.preventDefault()
-    alert('submit')
+    alert('Your Search has been submitted!')
     API.createDate({
-      dateTime: this.state.day ?"day":"night",
-      dateName:"Big Time Golf",
+      dateTime: this.state.day ? "day" : "night",
+      dateName: "Big Time Golf",
       dateBudget: this.state.dateBudget,
       dateRating: this.state.restRating,
       dateReview: "4.3",
-      dateRestaurant: this.state.dateOut ?"outDoor": "InDoor",
+      dateRestaurant: this.state.dateOut ? "outDoor" : "InDoor",
       dateEventLocation: this.state.zipCode,
       dateRestaurantLocation: "Clarksville",
       dateEventName: "Bands on the grass"
     }).then(results => {
       console.log(results)
+
     })
- 
+    this.props.history.push('/results')
   }
 
   handleInputChange = (event) => {
-    const { name, value } = event.target;
+    const {name, value} = event.target;
 
     this.setState({
       [name]: value,
@@ -108,6 +110,7 @@ class Dates extends Component {
         .then((res) => this.loadDates())
         .catch((err) => console.log(err));
     }
+
   };
 
   render() {
@@ -162,7 +165,7 @@ class Dates extends Component {
                 value={this.state.zipcode}
                 onChange={this.handleInputChange}
                 name="zipCode"
-                placeholder="Enter your Zip Code (required)"/>
+                placeholder="Enter your Zip Code (required)" />
             </form>
             <br /> <br />
           </Col>
@@ -183,15 +186,15 @@ class Dates extends Component {
               </div>
               <div className="btn-group-toggle, checkBox">
                 <label className="btn btn-secondary ">
-                <input type="checkbox" autocomplete="off" name="dateOut" checked={this.state.dateOut} onChange={this.handleInputChange} /> OutDoor
-                 
+                  <input type="checkbox" autocomplete="off" name="dateOut" checked={this.state.dateOut} onChange={this.handleInputChange} /> OutDoor
+
                 </label>
               </div>
               <div className="btn-group btn-group-toggle checkBox" >
                 <label className="btn btn-secondary ">
-                  <input type="radio" name="option" id="option2"  onChange={this.handleInputChange}/>Event</label>
+                  <input type="radio" name="option" id="option2" onChange={this.handleInputChange} />Event</label>
                 <label className="btn btn-secondary">
-                  <input type="radio" name="option" id="option3" onChange={this.handleInputChange}/>Dinning</label>
+                  <input type="radio" name="option" id="option3" onChange={this.handleInputChange} />Dinning</label>
               </div>
               <br></br>
               <Form.Group controlId="exampleForm.ControlSelect1">
