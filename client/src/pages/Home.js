@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row, Container } from "../components/Grid";
+import {Col, Row, Container} from "../components/Grid";
 import Player from "../components/Player/Player";
 import "./css/home.css"
 
@@ -11,7 +11,7 @@ function Home() {
                     <Row>
                         <Col size="md-5">
                             <div className="app-pitch">
-                                <h1>DateCreate: </h1>
+                                <h1 className="mainh1">DateCreate: </h1>
                                 <h2>Generating Unique Dates one click at a time!</h2>
                                 <p>If you've ever tried to plan a romatic night out with your
                                 special someone, or even a casual night out with friends, you

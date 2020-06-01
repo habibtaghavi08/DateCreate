@@ -3,7 +3,7 @@
     margin-left: 20px;
 }
 
-h1{
+.mainh1{
     font-family: 'Wendy One', sans-serif; 
      font-size: 100px;
     text-shadow:#EC576B 2px 2px 8px; 
@@ -17,7 +17,7 @@ h2{
    text-shadow: cyan 2px 2px 3px;
 }
 
-h3{ 
+.mainh3{ 
     font-family: 'Wendy One', sans-serif; 
     text-shadow: cyan 1px 2px 2px;
     font-size: 30px;
