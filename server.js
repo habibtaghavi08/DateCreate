@@ -19,7 +19,7 @@ app.use(routes);
 // Connect to the Mongo DB
 // TODO: rename the database to something that will relate to our app
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/datecreateDB");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://users:password1@ds041939.mlab.com:41939/heroku_qxm04tk1");
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
