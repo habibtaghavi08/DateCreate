@@ -5,7 +5,7 @@ When you don't know what to do today or tonight, let the app send you some where
 
 The Create your Date App is where you can come and select some data that will let the app arrive to a random date built just for you . 
 
-### [Create your Date  Link]( https://cryptic-temple-44760.herokuapp.com/)
+### [Create your Date  Link]( https://date-create-app.herokuapp.com/)
 
 ![CreateYourDate](./client/public/assets/DateCreateLogo.png)
 
@@ -18,7 +18,7 @@ These instructions will get you a copy of the project [Date Create ](https://git
 What things you need: 
 * code editing [Visual Studio](https://visualstudio.microsoft.com/)
 * work bench ui [robo3t](https://robomongo.org/) 
-* 
+* PostMan [Postman](https://www.postman.com/)
 * 
 * 
 
@@ -45,26 +45,37 @@ npm i
 You will be installing the following npm packages:
 * express
 * express-handlebars
-* mongoose
-* cheerio
-* axios 
+* @bearer/node-agent
+* axios
+* bootstrap
+* dotenv
+* express 
+* if-env
+* mongoose 
+* object-assign
+* query-string
+* react
+* react-bootstrap
+* react-dom
+* react-iframe
+* react-player 
+* react-rating
+* react-router-dom
+* redux
+* use-react-router
+* video-react
 
-
-Next open MySQL and create a new "connection"
+Next open robo3t and create a new "connection"
 * create a user name
 * set up a pass word
 
-Now you will create your own .env file in the root folder and enter the following info.
+
+
+
+```
 
 
 ```
-DBhost = "localhost"
-DBuser = "root" or your username
-DBPass = "root" or your pass word chosen
-
-```
-Now go into the (/models/schema.sql) and (seeds.sql) files and copy the information and enter into your workbench.
-Be sure to run the code to create your DB (data base) and Tables.  Then on the seeds file, run that code to create the usable information.
 
 ## Running the server
 
@@ -75,15 +86,18 @@ Now you will want to run the web site locally.
 This will open your terminal in your "Root" folder and allow you to run the server "you may have done this already to get your  "npm i " completed
 
 ```
-node server.js
+npm start or yarn start
 ```
 
 ### You should now see the serving running
 
-click on the link to open your browser "local host"
+With this react application it should start automatically, so wait for the lines below to show.
 
 ```
-Server listening on: http://localhost:8080
+Starting the development server...
+
+Parser: true } to MongoClient.connect.
+[0] �  ==> API Server now listening on PORT 3001!
 ```
 
 # Project work
@@ -100,15 +114,17 @@ using the the app [mLab](https://reasonwithme.herokuapp.com/)
 * [React](https://reactjs.org/) - The web framework used
 * [Font Awesome](https://fontawesome.com/) - Icon and font
 * [Node.js](https://nodejs.org/en/) - javascript, orm, connection and server.js files
+* [Biteable](https://biteable.com/) - video creation for the front page 
+* [React Bootstrap](https://react-bootstrap.github.io/) - style and components use
 
 
 
 ## Project Team:
-* **Dannielle Taylor** - *Project aspects of the app* - [d-taylor6403](https://github.com/d-taylor6403)
-* **Mike Lusso** - *Project aspects of the app* - [Mlusso06](https://github.com/Mlusso06)
-*  **Travis Bunn** - *Project aspects of the app* - [drtravis4](https://github.com/drtravis4)
-*  **Celeste Lewis** - *Project aspects of the app* - [cdlewis42](https://github.com/cdlewis42)
-* **Seyed Habib Taghavi** - *Project leader, Repo owner, and aspects of the app* -[habibtaghavi08](https://github.com/habibtaghavi08) 
+* **Dannielle Taylor** - *Front-end, graphics, and backend* - [d-taylor6403](https://github.com/d-taylor6403)
+* **Mike Lusso** - *Front-end, and some backend* - [Mlusso06](https://github.com/Mlusso06)
+*  **Travis Bunn** - *Front-end, styling* - [drtravis4](https://github.com/drtravis4)
+*  **Celeste Lewis** - *Back-end, graphics, and some front-end* - [cdlewis42](https://github.com/cdlewis42)
+* **Seyed Habib Taghavi** - *Project leader, Repo owner, front-end, and some backend* -[habibtaghavi08](https://github.com/habibtaghavi08) 
 
 
 ## BootCamp Acknowledgments 

@@ -8,26 +8,21 @@ import { ProfileBtn, CompletedBtn, PlannedDateBtn } from "../components/Form";
 import "../components/Jumbotron/style.css";
 // import ReactDom from "react-dom";
 // import { Redirect, NavLink } from "react-router-dom";
-
+import API from "../utils/API"
 
 // just making a change // 
 class PlanDates extends Component {
 
     state = {
-        dateName: [{
-            dateName: "Fire and Ice",
-            dateTime: "Day",
-            dateLocation: "Nashville",
-            dateBudget: "$$",
-            dateRestaurant: "Sweet CeCe's",
-            dateEvent: "The Armory Gun Range",
-            dateRating: 5,
-            dateReview: "Great idea for shooting at the range followed by Ice Cream! My girl loved it.",
-        }],
+        dateName: [],
     };
 
     componentDidMount() {
-
+API.getAllDates().then(results => {
+    this.setState({
+        dateName: results.data
+    })
+})
     }
 
 
@@ -112,6 +107,8 @@ class PlanDates extends Component {
 
                                 <Planned
                                     dateName={date.dateName}
+                                    dateRestaurant= {date.dateRestaurant}
+                                    dateEvent={date.dateEvent}
                                     dateLocation={date.dateLocation}
                                     dateRating={date.dateRating}
                                     dateReview={date.dateReview} />

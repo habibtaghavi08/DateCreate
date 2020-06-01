@@ -1,10 +1,10 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 // import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import Completed from "../components/Completed"
-import {Col, Row, Container} from "../components/Grid";
+import { Col, Row, Container } from "../components/Grid";
 // import { List, ListItem } from "../components/List";
-import {ProfileBtn, CompletedBtn, PlannedDateBtn} from "../components/Form";
+import { ProfileBtn, CompletedBtn, PlannedDateBtn } from "../components/Form";
 import "../components/Jumbotron/style.css";
 // import ReactDom from "react-dom";
 // import { Redirect, NavLink } from "react-router-dom";
@@ -14,8 +14,8 @@ import "../components/Jumbotron/style.css";
 class CompDates extends React.Component {
 
 
-    state= {
-        dateName:[{
+    state = {
+        dateName: [{
             dateName: "Romantic Sushi",
             dateTime: "Night",
             dateLocation: "Nashville",
@@ -25,7 +25,7 @@ class CompDates extends React.Component {
             dateRating: 4.5,
             dateReview: "The sushi was excellent and the drinks were wonderful. So much fun playing mini golf!",
         }],
-     };
+    };
     componentDidMount() {
 
         this.loadCompDates();
@@ -120,12 +120,14 @@ class CompDates extends React.Component {
                         {this.state.dateName.map(date => (
                             <div className="row" key={date._id}>
 
-                        <Completed 
-                            dateName={date.dateName}
-                            dateLocation= {date.dateLocation}
-                            dateRating = {date.dateRating}
-                            dateReview = {date.dateReview}/>
-         </div>
+                                <Completed
+                                    dateName={date.dateName}
+                                    dateRestaurant={date.dateRestaurant}
+                                    dateEvent={date.dateEvent}
+                                    dateLocation={date.dateLocation}
+                                    dateRating={date.dateRating}
+                                    dateReview={date.dateReview} />
+                            </div>
 
                         ))}
 
