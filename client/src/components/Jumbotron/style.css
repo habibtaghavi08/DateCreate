@@ -10,7 +10,14 @@
     letter-spacing: .01em;
     padding-top: 15px;
 }
+.scoreTxt {
+    font-family: 'Wendy One', sans-serif;
+    font-size: 150%;
+    letter-spacing: .01em;
+    padding-top: 25px;
+    align-items: center;
 
+}
 .button {
     color: black;
 }
