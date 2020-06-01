@@ -18,7 +18,7 @@ import "./app.css"
 import Planned from './pages/Planned';
 import Completed from "./pages/Completed";
 
- 
+
 
 
 
@@ -169,6 +169,11 @@ class App extends Component {
                 <Route exact path="/reggie" component={Reggie}
                   validateRegistration={this.validateRegistration} />
                 <Route exact path="/repo" component={() => {window.location.href = 'https://github.com/habibtaghavi08/DateCreate'; return null;}} />
+                <Route exact path="/dannielle" component={() => {window.location.href = 'https://d-taylor6403.github.io/Professional-Portfolio/'; return null;}} />
+                <Route exact path="/mike" component={() => {window.location.href = 'https://mlusso06.github.io/Responsive-Portfolio/index.html'; return null;}} />
+                <Route exact path="/celeste" component={() => {window.location.href = 'https://github.com/cdlewis42'; return null;}} />
+                <Route exact path="/travis" component={() => {window.location.href = 'https://github.com/drtravis4'; return null;}} />
+                <Route exact path="/habib" component={() => {window.location.href = 'https://github.com/habibtaghavi08'; return null;}} />
                 <Route exact path="/tos" component={() => {window.location.href = './component/modal'; return null;}} />
                 <Route component={NoMatch} />
 

@@ -11,9 +11,13 @@ import ActivitySearchResults from "../components/ActivitySearchResults/ActivityS
 //import Form from 'react-bootstrap/Form';
 
 
+
 export default function Search() {
-    const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(2, "Breakfast", 16093, "nashville,tn")
-    const [events, amounteventsResults, searcheventsParams, seteventsSearchParams] = useActivitySearch("film", 40000, "nashville,tn", 50)
+    const dateTime = Date.now();
+    const start_date = Math.floor(dateTime / 1000);
+    const categories = "nightlife, other, fashion, film, festivals-fairs"
+    const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(2, "Mexican", 16093, "nashville,tn")
+    const [events, amounteventsResults, searcheventsParams, seteventsSearchParams] = useActivitySearch(start_date, "other", 16093, "nashville,tn", 50)
 
 
     function refreshPage() {
