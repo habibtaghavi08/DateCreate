@@ -73,7 +73,7 @@ class PlanDates extends Component {
                     <Col size="md-2">
                         <form >
                             <Jumbotron>
-                           <p className="rDates-1">Avg Score of Date</p ></Jumbotron>
+                           <h3 className="scoreTxt">Avg Score of Date</h3 ></Jumbotron>
                         </form>
                     </Col>
                     <Col size="md-4">

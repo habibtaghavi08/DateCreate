@@ -87,16 +87,16 @@ class CompDates extends React.Component {
 
                         </form>
                     </Col>
-                    <Col size="md-1">
+                    <Col size="md-2">
                         <form >
                             <Jumbotron>
-                           <h3>Score of Date</h3></Jumbotron>
+                           <h3 className="scoreTxt">Score of Date</h3></Jumbotron>
                         </form>
                     </Col>
-                    <Col size="md-5">
+                    <Col size="md-4">
                         <form >
                             <Jumbotron>
-                            <h2>User Comments</h2></Jumbotron>
+                            <p className="rDates">User Comments</p></Jumbotron>
 
                         </form>
                     </Col>
@@ -112,14 +112,13 @@ class CompDates extends React.Component {
                 <Row>
                     <Col size="md-12" className= "plResults">
                         {this.state.dateName.map(date => (
-                            <div className="row" key={date._id}></div>
+                            <div className="row" key={date._id}>
+
+                        <Completed >
+
+
+                        </Completed></div>
                         ))}
-
-                        <Completed
-                        >
-
-
-                        </Completed>
            
                     </Col>
                 </Row>
