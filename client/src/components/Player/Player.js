@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import ReactPlayer from "react-player";
 import "./Player.css"
 
@@ -14,7 +14,7 @@ class Player extends Component {
                     width="100%"
                     height="100%"
 
-                    url="https://www.youtube.com/watch?v=EH_3LrsEq00" />
+                    url="https://www.youtube.com/watch?v=enRPyn02fAY" />
             </div>
         );
     }
