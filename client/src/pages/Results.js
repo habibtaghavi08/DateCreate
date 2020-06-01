@@ -2,12 +2,13 @@ import React from "react";
 import Jumbotron from "../components/Jumbotron";
 //import API from "../utils/API";
 import {Col, Row, Container} from "../components/Grid";
-import {CompletedBtn, PlannedDateBtn, SaveCompletedBtn, SavePlannedDateBtn, ShuffleBtn} from "../components/Form";
+import {SaveCompletedBtn, SavePlannedDateBtn, ShuffleBtn} from "../components/Form";
 import useBusinessSearch from "../utils/hooks/yelp-api/useBusinessSearch";
 import BusinessSearchResults from "../components/SearchResults/BusinessSearchResults"
 import "./css/results.css"
 import useActivitySearch from "../utils/hooks/yelp-api/useActivitySearch";
 import ActivitySearchResults from "../components/ActivitySearchResults/ActivitySearchResults";
+
 //import Form from 'react-bootstrap/Form';
 
 
@@ -55,18 +56,8 @@ export default function Search() {
                     </div>
                 </Col>
                 <Col size="md-2">
-                    <CompletedBtn
-
-                    //onClick={this.handleFormSubmit}
-                    >
-                        Completed Dates
-                        </CompletedBtn>
-                    <PlannedDateBtn
-
-                    //onClick={this.handleFormSubmit}
-                    >
-                        Planned Dates
-                        </PlannedDateBtn>
+                    <a className="btn btn-info btn btn-info btn-block btn-lg" href="/planned" role="button">Favorite Dates</a>
+                    <a className="btn btn-info btn btn-info btn-block btn-lg" href="/completed" role="button">Completed Dates</a>
                 </Col>
             </Row>
             <Row>
