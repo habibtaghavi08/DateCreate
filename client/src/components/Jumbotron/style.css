@@ -14,7 +14,6 @@
     font-family: 'Wendy One', sans-serif;
     font-size: 150%;
     letter-spacing: .01em;
-    padding-top: 25px;
     align-items: center;
 
 }
@@ -29,9 +28,9 @@
 
 .rDates {
     font-family: 'Wendy One', sans-serif;
-    text-justify: auto;
-    font-size: 250%;
-    line-height: 20px;
+    /* text-justify: auto; */
+    font-size: 200%;
+    /* line-height: 20px; */
 }
 .rDates-1 {
     font-family: 'Wendy One', sans-serif;

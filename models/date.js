@@ -12,6 +12,7 @@ const dateSchema = new Schema({
   dateEventLocation: {type: String, required: true},
   dateRating: {type: Number},
   dateReview: {type: String},
+  dateEvent: {type: String}
 });
 
 const Date = mongoose.model("Date", dateSchema);
