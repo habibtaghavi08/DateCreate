@@ -1,56 +1,89 @@
-.jumboTxt{
+.jumboTxt {
     font-family: 'Wendy One', sans-serif;
     font-size: 200%;
-
+    margin: 17px;
 }
 
-.manTxt{
+.manTxt {
     font-family: 'Wendy One', sans-serif;
     font-size: 115%;
-    letter-spacing: .1em;
+    letter-spacing: .01em;
     padding-top: 15px;
+}
+.scoreTxt {
+    font-family: 'Wendy One', sans-serif;
+    font-size: 150%;
+    letter-spacing: .01em;
+    padding-top: 25px;
+    align-items: center;
 
 }
-
 .button {
-
-color: black;
-
+    color: black;
 }
 
-
-.results{
+.results {
     height: 200px;
+ 
 }
+
 .rDates {
     font-family: 'Wendy One', sans-serif;
     text-justify: auto;
-    font-size: inherit;
-  
+    font-size: 250%;
+    line-height: 20px;
+}
+.rDates-1 {
+    font-family: 'Wendy One', sans-serif;
+    text-justify: auto;
+    font-size: 100%;
+    line-height: 10px;
 }
 
 .titleBlk {
- height: 20;
-
+    height: 20;
 }
 
-form {
+.form-1 {
     border-style: solid;
-    border-color:#4EC5C1;
+    border-color: #4EC5C1;
     border-width: 7px;
     border-radius: 5px;
+    margin: 15px;
 }
+
 .btn {
     float: left;
     background-color: black;
     color: #EC576B;
     font-weight: bold;
     font-family: 'Wendy One', sans-serif;
-    letter-spacing: .05em;
-
+    letter-spacing: .5em;
     border-style: solid ;
     border-color: #4EC5C1;
     border-width: 4px;
     margin-top: 20px;
     margin-right: 15px;
 }
+
+.filterText {
+    font-family: 'Wendy One', sans-serif;
+    align-content: center;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+.checkBox {
+    display: flex;
+    margin-left: 5px;
+}
+
+Form.Group {
+
+    margin: 4px;
+}
+

@@ -21,6 +21,7 @@
     "video.js": "^7.7.6"
   },
   "dependencies": {
+    "@bearer/node-agent": "^3.1.2",
     "axios": "^0.18.1",
     "bootstrap": "^4.5.0",
     "dotenv": "^8.2.0",
@@ -34,8 +35,10 @@
     "react-dom": "^16.13.1",
     "react-iframe": "^1.8.0",
     "react-player": "^2.0.1",
+    "react-rating": "^2.0.5",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
+    "use-react-router": "^1.0.7",
     "video-react": "^0.14.1"
   }
 }
