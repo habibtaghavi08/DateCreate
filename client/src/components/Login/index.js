@@ -31,7 +31,9 @@ class Login extends React.Component {
   render() {
     console.log(this.state)
     return (
-      <div className="form-container">
+
+      <div className="container">
+
         <Form>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Username</Form.Label>
@@ -45,14 +47,23 @@ class Login extends React.Component {
               className="input" onChange={this.handleInputChange.bind(this)} />
           </Form.Group>
           <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
+
+            <Form.Check type="checkbox" label="Remeber Me" />
+
           </Form.Group>
           <Button variant="primary" type="submit"
             onClick={event => {event.preventDefault(); this.checkInformation(this.state.userName, this.state.password)}}
           >
             Submit
-  </Button>
+
+          </Button>
         </Form>
+        <br />
+        <br />
+        <div>
+          <h5><a href="/reggie">New to DateCreate? Create a new account here</a></h5>
+        </div>
+
       </div>
     )
   }
