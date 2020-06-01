@@ -12,12 +12,14 @@ import ActivitySearchResults from "../components/ActivitySearchResults/ActivityS
 
 
 
+
 export default function Search() {
-    const dateTime = Date.now();
-    const start_date = Math.floor(dateTime / 1000);
-    const categories = "nightlife, other, fashion, film, festivals-fairs"
-    const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(2, "Mexican", 16093, "nashville,tn")
-    const [events, amounteventsResults, searcheventsParams, seteventsSearchParams] = useActivitySearch(start_date, "other", 16093, "nashville,tn", 50)
+    const dateTime = new Date().getTime();
+    const timestamp = Math.floor(dateTime / 1000);
+    console.log(timestamp)
+    const categories = ("festivals-fairs, music")
+    const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(2, "Mexican", 40000, "nashville,tn")
+    const [events, amounteventsResults, searcheventsParams, seteventsSearchParams] = useActivitySearch(categories, 40000, "nashville,tn", 50, timestamp)
 
 
     function refreshPage() {
