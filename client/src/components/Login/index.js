@@ -31,11 +31,7 @@ class Login extends React.Component {
   render() {
     console.log(this.state)
     return (
-<<<<<<< Updated upstream
       <div className="container">
-=======
-      <div className="form-container">
->>>>>>> Stashed changes
         <Form>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Username</Form.Label>
@@ -49,17 +45,12 @@ class Login extends React.Component {
               className="input" onChange={this.handleInputChange.bind(this)} />
           </Form.Group>
           <Form.Group controlId="formBasicCheckbox">
-<<<<<<< Updated upstream
             <Form.Check type="checkbox" label="Remeber Me" />
-=======
-            <Form.Check type="checkbox" label="Check me out" />
->>>>>>> Stashed changes
           </Form.Group>
           <Button variant="primary" type="submit"
             onClick={event => {event.preventDefault(); this.checkInformation(this.state.userName, this.state.password)}}
           >
             Submit
-<<<<<<< Updated upstream
           </Button>
         </Form>
         <br />
@@ -67,10 +58,6 @@ class Login extends React.Component {
         <div>
           <h5><a href="/reggie">New to DateCreate? Create a new account here</a></h5>
         </div>
-=======
-  </Button>
-        </Form>
->>>>>>> Stashed changes
       </div>
     )
   }
