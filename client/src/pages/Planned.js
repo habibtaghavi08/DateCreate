@@ -4,14 +4,27 @@ import Planned from "../components/Planned"
 import Jumbotron from "../components/Jumbotron";
 import { Col, Row, Container } from "../components/Grid";
 // import { List, ListItem } from "../components/List";
-import {  ProfileBtn, CompletedBtn, PlannedDateBtn } from "../components/Form";
+import { ProfileBtn, CompletedBtn, PlannedDateBtn } from "../components/Form";
 import "../components/Jumbotron/style.css";
-import ReactDom from "react-dom";
-import { Redirect, NavLink } from "react-router-dom";
+// import ReactDom from "react-dom";
+// import { Redirect, NavLink } from "react-router-dom";
 
 
 // just making a change // 
 class PlanDates extends Component {
+
+    state = {
+        dateName: [{
+            dateName: "Fire and Ice",
+            dateTime: "Day",
+            dateLocation: "Nashville",
+            dateBudget: "$$",
+            dateRestaurant: "Sweet CeCe's",
+            dateEvent: "The Armory Gun Range",
+            dateRating: 5,
+            dateReview: "Great idea for shooting at the range followed by Ice Cream! My girl loved it.",
+        }],
+    };
 
     componentDidMount() {
 
@@ -66,20 +79,20 @@ class PlanDates extends Component {
                     <Col size="md-4" >
                         <form>
                             <Jumbotron className="titleBlk">
-                            <p className="rDates">Name of Date </p></Jumbotron>
+                                <p className="rDates">Name of Date </p></Jumbotron>
 
                         </form>
                     </Col>
                     <Col size="md-2">
                         <form >
                             <Jumbotron>
-                           <h3 className="scoreTxt">Avg Score of Date</h3 ></Jumbotron>
+                                <h3 className="scoreTxt">Avg Score of Date</h3 ></Jumbotron>
                         </form>
                     </Col>
                     <Col size="md-4">
                         <form >
                             <Jumbotron>
-                            <p className="rDates">User Comments</p></Jumbotron>
+                                <p className="rDates">User Comments</p></Jumbotron>
 
                         </form>
                     </Col>
@@ -93,12 +106,17 @@ class PlanDates extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col size="md-12" className= "plResults">
-                        <Planned>
+                    <Col size="md-12" className="plResults">
+                        {this.state.dateName.map(date => (
+                            <div className="row" key={date._id}>
 
-
-                        </Planned>
-           
+                                <Planned
+                                    dateName={date.dateName}
+                                    dateLocation={date.dateLocation}
+                                    dateRating={date.dateRating}
+                                    dateReview={date.dateReview} />
+                            </div>
+                        ))}
                     </Col>
                 </Row>
 
