@@ -36,16 +36,16 @@ function About() {
                             
                                <h1> TEAM OVER-REACTORS </h1>
               
-                               <h2><a>Celeste Lewis - Software Engineer | Web Development</a></h2>
-                               <h2><a>Mike Lusso - Software Engineer | Web Development</a></h2>
-                               <h2><a>Dannielle Taylor - Software Engineer | Web Development</a></h2>
-                               <h2><a>Travis Bunn - Software Engineer | Web Development</a></h2>
-                               <h2><a>Seyed Habib Taghavi - Software Engineer | Web Development</a></h2>
+                               <h2>Celeste Lewis - Software Engineer | Web Development</h2>
+                               <h2>Mike Lusso - Software Engineer | Web Development</h2>
+                               <h2>Dannielle Taylor - Software Engineer | Web Development</h2>
+                               <h2>Travis Bunn - Software Engineer | Web Development</h2>
+                               <h2>Seyed Habib Taghavi - Software Engineer | Web Development</h2>
                   
                                  <br/>
-                               <h3><a>Seyed Habib Taghavi - Repo Owner | Project Manager | Team Lead</a></h3>
-                               <h3><a>Dannielle Taylor - Team Lead</a></h3>
-                               <h3><a>Mike Lusso - Team Lead</a></h3>
+                               <h3>Seyed Habib Taghavi - Repo Owner | Project Manager | Team Lead</h3>
+                               <h3>Dannielle Taylor - Team Lead</h3>
+                               <h3>Mike Lusso - Team Lead</h3>
                                 
 
 

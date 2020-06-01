@@ -2,11 +2,10 @@ import React, { Component } from "react";
 // import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import {
   Input,
-  TextArea,
   FormBtn,
   ProfileBtn,
   CompletedBtn,
@@ -14,8 +13,8 @@ import {
 } from "../components/Form";
 import Form from "react-bootstrap/Form";
 import "../components/Jumbotron/style.css";
-import ReactDom from "react-dom";
-import { Redirect, NavLink } from "react-router-dom";
+// import ReactDom from "react-dom";
+// import { Redirect, NavLink } from "react-router-dom";
 
 // just making a change //
 class Dates extends Component {
@@ -26,7 +25,7 @@ class Dates extends Component {
 
       restaurants: [{ id: "1", rest: "Afghan" }, { id: "2", rest: "African" }, { id: "3", rest: "American(Traditional)" }, { id: "4", rest: "Armenian" }, { id: "5", rest: "Beer Hall" }, { id: "6", rest: "Beer Garden" }, { id: "7", rest: "Bistro" }, { id: "8", rest: "Brazilian" }, { id: "9", rest: "Breakfast & Brunch" }, { id: "10", rest: "Canadian" }, { id: "11", rest: "Cafe" }, { id: "12", rest: "Coffee House" }, { id: "13", rest: "Caribbean" }, { id: "14", rest: "Dinner Theater" }, { id: "15", rest: "Food Court" }, { id: "16", rest: "French" }, { id: "17", rest: "Ethiopian" }, { id: "18", rest: "German" }, { id: "19", rest: "Italian" }, { id: "20", rest: "Japanese" }, { id: "21", rest: "Mexican" }, { id: "22", rest: "Middle Eastern" }, { id: "23", rest: "Pizza" }, { id: "24", rest: "Persian/Iranian" }, { id: "25", rest: "Chop House" }, { id: "26", rest: "SteakHouse" }, { id: "27", rest: "Sushi Bar" }, { id: "28", rest: "Thai" }, { id: "29", rest: "Not Vegetarian" }, { id: "30", rest: "Ok Vegetarian" }, { id: "31", rest: "Waffles" }],
 
-      dateCost: "",
+      dateBudget: "",
       restaurantType: "",
       day: false,
       night: false,
@@ -84,7 +83,7 @@ class Dates extends Component {
         restaurantType: this.state.restaurantType,
         distance: this.state.distance,
         restRating: this.state.restRating,
-        dateCost: this.state.dateCost,
+        dateBudget: this.state.dateBudget,
         dateOut: this.state.dateOut,
         dateIn: this.state.dateIn,
         dateType: this.state.dateType
@@ -116,7 +115,7 @@ class Dates extends Component {
             <form className="form-1">
               <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label className="filterText">Select your Date Budget</Form.Label>
-                <Form.Control as="select" name="dateCost" onChange={this.handleInputChange}>
+                <Form.Control as="select" name="dateBudget" onChange={this.handleInputChange}>
                   <option value="1">Free</option>
                   <option value="2">$</option>
                   <option value="3">$$</option>
@@ -163,17 +162,17 @@ class Dates extends Component {
               </select>
               <div className="btn-group-toggle, checkBox" >
                 <label className="btn btn-secondary ">
-                  <input type="checkbox" autocomplete="off" name="Indoor"aria-pressed="true" checked={this.state.dateIn} onChange={this.handleClick.bind(this)} /> In Door
+                  <input type="checkbox" autocomplete="off" name="Indoor" checked={this.state.dateIn} onChange={this.handleClick.bind(this)} /> In Door
                 </label>
               </div>
               <div className="btn-group-toggle, checkBox" data-toggle="buttons">
                 <label className="btn btn-secondary ">
-                  <input type="checkbox" autocomplete="off" name="OutDoor" checked={this.state.dateOut} onChange={this.handleClick.bind(this)} /> Out door
+                  <input type="checkbox" value="OutDoor" autocomplete="off" name="OutDoor" checked={this.state.dateOut} onChange={this.handleClick.bind(this)} /> Out door
                 </label>
               </div>
               <div className="btn-group btn-group-toggle checkBox" >
                 <label className="btn btn-secondary ">
-                  <input type="radio" name="option" id="option2" aria-pressed="true" onChange={this.handleClick.bind(this)}/>Event</label>
+                  <input type="radio" name="option" id="option2"  onChange={this.handleClick.bind(this)}/>Event</label>
                 <label className="btn btn-secondary">
                   <input type="radio" name="option" id="option3" onChange={this.handleClick.bind(this)}/>Dinning</label>
               </div>

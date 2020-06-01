@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../components/Grid";
-import { render } from "react-dom";
+// import { render } from "react-dom";
 import Jumbotron from "../components/Jumbotron";
 import { ProfileBtn, CompletedBtn, PlannedDateBtn } from "../components/Form";
 
