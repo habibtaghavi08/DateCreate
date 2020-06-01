@@ -9,17 +9,18 @@ export default {
   findUserName: function(userName){
     console.log(userName)
     return axios.get("api/user/findUserName/" + userName)
+  },
+  // Gets the Date with the given id
+  getDate: function(id) {
+    return axios.get("/" + id);
+  },
+  // Deletes the Date with the given id
+  deleteDate: function(id) {
+    return axios.delete("/api/date/" + id);
+  },
+  // Saves a Date to the database
+  saveDate: function(dateData) {
+    return axios.post("/api/date/", dateData);
   }
-  // // Gets the book with the given id
-  // getBook: function(id) {
-  //   return axios.get("/api/books/" + id);
-  // },
-  // // Deletes the book with the given id
-  // deleteBook: function(id) {
-  //   return axios.delete("/api/books/" + id);
-  // },
-  // // Saves a book to the database
-  // saveBook: function(bookData) {
-  //   return axios.post("/api/books", bookData);
-  // }
+  
 };

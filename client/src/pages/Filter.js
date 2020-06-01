@@ -55,6 +55,10 @@ class Dates extends Component {
     this.props.history.push("./planned");
   };
 
+  handleResultsClk = () => {
+    this.props.history.push ("./results");
+  }
+
   handleInputChange = (event) => {
     const { name, value } = event.target;
 
@@ -72,15 +76,17 @@ class Dates extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.zipcode && this.state.distance) {
-      API.save({
+    if (this.state.zipCode && this.state.distance) {
+      API.saveDate({
         zipCode: this.state.zipCode,
-        eventTime: this.state.eventTime,
+        day: this.state.day,
+        night: this.state.night,
         restaurantType: this.state.restaurantType,
         distance: this.state.distance,
         restRating: this.state.restRating,
         dateCost: this.state.dateCost,
-        dateLoc: this.state.dateLoc,
+        dateOut: this.state.dateOut,
+        dateIn: this.state.dateIn,
         dateType: this.state.dateType
 
       })
@@ -128,26 +134,22 @@ class Dates extends Component {
                 </Form.Control>
               </Form.Group>
 
-              <div className="btn-group-toggle, checkBox" data-toggle="buttons">
+              <div className="btn-group-toggle, checkBox" >
                 <label className="btn btn-secondary">
                   <input type="checkbox" name="day" value="daytime" checked={this.state.day} onChange={this.handleClick.bind(this)} /> Day Time
                 </label>
               </div>
-              <div className="btn-group-toggle, checkBox" data-toggle="buttons" >
+              <div className="btn-group-toggle, checkBox"  >
                 <label className="btn btn-secondary">
                   <input type="checkbox" name="night" autocomplete="off" checked={this.state.night} onChange={this.handleClick.bind(this)} /> Night Time </label>
               </div>
-
-
               <Input
                 value={this.state.zipcode}
                 onChange={this.handleInputChange}
                 name="zipCode"
-                placeholder="Enter your Zip Code (required)"
-              />
+                placeholder="Enter your Zip Code (required)"/>
             </form>
-            <br />
-            <br />
+            <br /> <br />
           </Col>
 
           <Col size="md-5">
@@ -159,27 +161,27 @@ class Dates extends Component {
                   {rest.rest}
                 </option>))}
               </select>
-              <div className="btn-group-toggle, checkBox" data-toggle="buttons">
-                <label className="btn btn-secondary active">
-                  <input type="checkbox" autocomplete="off" checked={this.state.dateIn} onChange={this.handleClick.bind(this)} /> In Door
-                </label>
-              </div>
-              <div className="btn-group-toggle, checkBox" data-toggle="buttons">
-                <label className="btn btn-secondary active">
-                  <input type="checkbox" autocomplete="off" checked={this.state.dateOut} onChange={this.handleClick.bind(this)} /> Out door
-                </label>
-              </div>
-              <div className="btn-group btn-group-toggle checkBox" data-toggle="buttons">
+              <div className="btn-group-toggle, checkBox" >
                 <label className="btn btn-secondary ">
-                  <input type="radio" name="options" id="option2" onChange={this.handleInputChange} />Event</label>
+                  <input type="checkbox" autocomplete="off" name="Indoor"aria-pressed="true" checked={this.state.dateIn} onChange={this.handleClick.bind(this)} /> In Door
+                </label>
+              </div>
+              <div className="btn-group-toggle, checkBox" data-toggle="buttons">
+                <label className="btn btn-secondary ">
+                  <input type="checkbox" autocomplete="off" name="OutDoor" checked={this.state.dateOut} onChange={this.handleClick.bind(this)} /> Out door
+                </label>
+              </div>
+              <div className="btn-group btn-group-toggle checkBox" >
+                <label className="btn btn-secondary ">
+                  <input type="radio" name="option" id="option2" aria-pressed="true" onChange={this.handleClick.bind(this)}/>Event</label>
                 <label className="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" onChange={this.handleInputChange} />Dinning</label>
+                  <input type="radio" name="option" id="option3" onChange={this.handleClick.bind(this)}/>Dinning</label>
               </div>
               <br></br>
               <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label className="filterText">Rating Type of Restaurant</Form.Label>
 
-                <Form.Control as="select" onChange={this.handleInputChange}>
+                <Form.Control as="select" name="Restaurant Rating" onChange={this.handleInputChange}>
                   <option>1 Star Rating</option>
                   <option>2 Star Rating</option>
                   <option>3 Star Rating</option>
@@ -190,8 +192,8 @@ class Dates extends Component {
               <br />
               <FormBtn
                 className="button"
-                // disabled={!(this.state.author && this.state.title)}
-                onClick={this.handleFormSubmit}>Submit
+                // disabled={!(this.state.zipCode && this.state.distance)}
+                onClick={this.handleResultsClk}>Submit
               </FormBtn>
 
             </form>
