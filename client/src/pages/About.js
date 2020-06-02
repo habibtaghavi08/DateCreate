@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/about.css"
 
-import { Col, Row, Container } from "../components/Grid"
+import {Col, Row, Container} from "../components/Grid"
 
 
 function About() {
@@ -12,12 +12,12 @@ function About() {
                     <Row>
                         <Col size="lg-12">
                             <div className="about-us">
-                                <h1>DATE CREATE</h1>
+                                <h1 className="mainh1">DATE CREATE</h1>
 
 
                                 <p>If you’ve ever tried to plan a romantic night out with your special someone, or that perfect first date, or even a casual night out with friends,
                                 you know how hard it can be to choose a great restaurant or to agree on the perfect weekend activity. Introducing Date Create,
-   an all-in-one automated date generator.</p>
+                                   an all-in-one automated date generator.</p>
 
 
                                 <p>The Date Create app allows the user to pick from 8 different categories, in order to generate a random date idea. These choices include a restaurant,
@@ -26,31 +26,35 @@ function About() {
                                 The user will be presented with the restaurant and activity details, down to the directions on how to get to the chosen date destinations. If users do
                                 not like the generated date, at that time, they can use the shuffle button, to generate a brand new experience of their liking. Use the app to plan a date
                                 in advance, or plan on the go with the mobile responsive phone app. Not only gone are the days of negotiating where to eat and what to do, but also, gone
-   are the days of NOT KNOWING where to eat and what to do!</p>
+                                  are the days of NOT KNOWING where to eat and what to do!</p>
 
-                                <p>DATE CREATE! Where Every Date Is An Adventure!</p>
-
-
+                                <p>DATE CREATE Where Every Date Is An Adventure!</p>
 
 
 
-                                <h1>TEAM OVER-REACTORS</h1>
 
-                                <h2><a>Celeste Lewis - Software Engineer | Web Development</a></h2>
-                                <h2><a>Mike Lusso - Software Engineer | Web Development </a></h2>
-                                <h2><a>Dannielle Taylor - Software Engineer | Web Development></a></h2>
-                                <h2><a>Travis Bunn - Software Engineer | Web Development</a></h2>
-                                <h2><a>Seyed Habib Taghavi - Software Engineer | Web Development</a></h2>
-                                <br></br>
-                                    <h3><a>Seyed Habib Taghavi - Repo Owner | Project Manager | Team Lead</a></h3>
-                                    <h3><a>Dannielle Taylor - Team Lead </a></h3>
-                                    <h3><a>Mike Lusso - Team Lead</a></h3>                                
-                                 </div>                       
-                            </Col>
-                       </Row>
-                 </Container>
-              </main> 
-          </div>
+
+                                <h1 className="mainh1"> TEAM OVER-REACTORS </h1>
+
+                                <h2><a href="/celeste">Celeste Lewis - Software Engineer | Web Development</a></h2>
+                                <h2><a href="/mike">Mike Lusso - Software Engineer | Web Development</a></h2>
+                                <h2><a href="/dannielle">Dannielle Taylor - Software Engineer | Web Development</a></h2>
+                                <h2><a href="travis">Travis Bunn - Software Engineer | Web Development</a></h2>
+                                <h2><a href="habib">Seyed Habib Taghavi - Software Engineer | Web Development</a></h2>
+
+                                <br />
+                                <h3 className="mainh3">Seyed Habib Taghavi - Repo Owner | Project Manager | Team Lead</h3>
+                                <h3 className="mainh3">Dannielle Taylor - Team Lead</h3>
+                                <h3 className="mainh3">Mike Lusso - Team Lead</h3>
+
+
+
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </main>
+        </div>
     );
 
 }

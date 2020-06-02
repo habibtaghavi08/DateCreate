@@ -1,12 +1,11 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 // import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
+// import { Link } from "react-router-dom";
+import {Col, Row, Container} from "../components/Grid";
 import {
   Input,
-  TextArea,
   FormBtn,
   ProfileBtn,
   CompletedBtn,
@@ -14,8 +13,9 @@ import {
 } from "../components/Form";
 import Form from "react-bootstrap/Form";
 import "../components/Jumbotron/style.css";
-import ReactDom from "react-dom";
-import { Redirect, NavLink } from "react-router-dom";
+import {Redirect} from "react-router-dom";
+// import ReactDom from "react-dom";
+// import { Redirect, NavLink } from "react-router-dom";
 
 // just making a change //
 class Dates extends Component {
@@ -24,9 +24,9 @@ class Dates extends Component {
     this.state = {
       value: "Chop House",
 
-      restaurants: [{ id: "1", rest: "Afghan" }, { id: "2", rest: "African" }, { id: "3", rest: "American(Traditional)" }, { id: "4", rest: "Armenian" }, { id: "5", rest: "Beer Hall" }, { id: "6", rest: "Beer Garden" }, { id: "7", rest: "Bistro" }, { id: "8", rest: "Brazilian" }, { id: "9", rest: "Breakfast & Brunch" }, { id: "10", rest: "Canadian" }, { id: "11", rest: "Cafe" }, { id: "12", rest: "Coffee House" }, { id: "13", rest: "Caribbean" }, { id: "14", rest: "Dinner Theater" }, { id: "15", rest: "Food Court" }, { id: "16", rest: "French" }, { id: "17", rest: "Ethiopian" }, { id: "18", rest: "German" }, { id: "19", rest: "Italian" }, { id: "20", rest: "Japanese" }, { id: "21", rest: "Mexican" }, { id: "22", rest: "Middle Eastern" }, { id: "23", rest: "Pizza" }, { id: "24", rest: "Persian/Iranian" }, { id: "25", rest: "Chop House" }, { id: "26", rest: "SteakHouse" }, { id: "27", rest: "Sushi Bar" }, { id: "28", rest: "Thai" }, { id: "29", rest: "Not Vegetarian" }, { id: "30", rest: "Ok Vegetarian" }, { id: "31", rest: "Waffles" }],
+      restaurants: [{id: "1", rest: "Afghan"}, {id: "2", rest: "African"}, {id: "3", rest: "American(Traditional)"}, {id: "4", rest: "Armenian"}, {id: "5", rest: "Beer Hall"}, {id: "6", rest: "Beer Garden"}, {id: "7", rest: "Bistro"}, {id: "8", rest: "Brazilian"}, {id: "9", rest: "Breakfast & Brunch"}, {id: "10", rest: "Canadian"}, {id: "11", rest: "Cafe"}, {id: "12", rest: "Coffee House"}, {id: "13", rest: "Caribbean"}, {id: "14", rest: "Dinner Theater"}, {id: "15", rest: "Food Court"}, {id: "16", rest: "French"}, {id: "17", rest: "Ethiopian"}, {id: "18", rest: "German"}, {id: "19", rest: "Italian"}, {id: "20", rest: "Japanese"}, {id: "21", rest: "Mexican"}, {id: "22", rest: "Middle Eastern"}, {id: "23", rest: "Pizza"}, {id: "24", rest: "Persian/Iranian"}, {id: "25", rest: "Chop House"}, {id: "26", rest: "SteakHouse"}, {id: "27", rest: "Sushi Bar"}, {id: "28", rest: "Thai"}, {id: "29", rest: "Not Vegetarian"}, {id: "30", rest: "Ok Vegetarian"}, {id: "31", rest: "Waffles"}],
 
-      dateCost: "",
+      dateBudget: "",
       restaurantType: "",
       day: false,
       night: false,
@@ -38,7 +38,7 @@ class Dates extends Component {
       dateType: "",
       redirect: false,
     };
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+
   }
 
   componentDidMount() {
@@ -55,12 +55,28 @@ class Dates extends Component {
     this.props.history.push("./planned");
   };
 
-  handleResultsClk = () => {
-    this.props.history.push ("./results");
+  handleResultsClk = (event) => {
+    event.preventDefault()
+    alert('Your Search has been submitted!')
+    API.createDate({
+      dateTime: this.state.day ? "day" : "night",
+      dateName: "Big Time Golf",
+      dateBudget: this.state.dateBudget,
+      dateRating: this.state.restRating,
+      dateReview: "4.3",
+      dateRestaurant: this.state.dateOut ? "outDoor" : "InDoor",
+      dateEventLocation: this.state.zipCode,
+      dateRestaurantLocation: "Clarksville",
+      dateEventName: "Bands on the grass"
+    }).then(results => {
+      console.log(results)
+
+    })
+    this.props.history.push('/results')
   }
 
   handleInputChange = (event) => {
-    const { name, value } = event.target;
+    const {name, value} = event.target;
 
     this.setState({
       [name]: value,
@@ -69,10 +85,11 @@ class Dates extends Component {
     console.log(name)
   };
 
-  handleClick(e) {
-    console.log("value of check : ", e.target.name);
-    this.setState({ [e.target.name]: !this.state[e.target.name] })
-  }
+  // handleClick = (e)=> {
+  //   console.log("value of check : ", e.target.name);
+  //   const {name, value}
+  //   this.setState({ [e.target.name]: !this.state[e.target.name] })
+  // }
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -84,7 +101,7 @@ class Dates extends Component {
         restaurantType: this.state.restaurantType,
         distance: this.state.distance,
         restRating: this.state.restRating,
-        dateCost: this.state.dateCost,
+        dateBudget: this.state.dateBudget,
         dateOut: this.state.dateOut,
         dateIn: this.state.dateIn,
         dateType: this.state.dateType
@@ -93,6 +110,7 @@ class Dates extends Component {
         .then((res) => this.loadDates())
         .catch((err) => console.log(err));
     }
+
   };
 
   render() {
@@ -116,7 +134,7 @@ class Dates extends Component {
             <form className="form-1">
               <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label className="filterText">Select your Date Budget</Form.Label>
-                <Form.Control as="select" name="dateCost" onChange={this.handleInputChange}>
+                <Form.Control as="select" name="dateBudget" onChange={this.handleInputChange}>
                   <option value="1">Free</option>
                   <option value="2">$</option>
                   <option value="3">$$</option>
@@ -126,7 +144,7 @@ class Dates extends Component {
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label className="filterText">Pick the Distance to Search</Form.Label>
-                <Form.Control name="distance" as="select" onChange={this.handleInputChange.bind(this)}>
+                <Form.Control name="distance" as="select" onChange={this.handleInputChange}>
                   <option value="8046">5 miles</option>
                   <option value="16093">10 miles</option>
                   <option value="32186">20 miles</option>
@@ -136,18 +154,18 @@ class Dates extends Component {
 
               <div className="btn-group-toggle, checkBox" >
                 <label className="btn btn-secondary">
-                  <input type="checkbox" name="day" value="daytime" checked={this.state.day} onChange={this.handleClick.bind(this)} /> Day Time
+                  <input type="checkbox" name="day" value="daytime" checked={this.state.day} onChange={this.handleInputChange} /> Day Time
                 </label>
               </div>
               <div className="btn-group-toggle, checkBox"  >
                 <label className="btn btn-secondary">
-                  <input type="checkbox" name="night" autocomplete="off" checked={this.state.night} onChange={this.handleClick.bind(this)} /> Night Time </label>
+                  <input type="checkbox" name="night" autocomplete="off" checked={this.state.night} onChange={this.handleInputChange} /> Night Time </label>
               </div>
               <Input
                 value={this.state.zipcode}
                 onChange={this.handleInputChange}
                 name="zipCode"
-                placeholder="Enter your Zip Code (required)"/>
+                placeholder="Enter your Zip Code (required)" />
             </form>
             <br /> <br />
           </Col>
@@ -156,26 +174,27 @@ class Dates extends Component {
             <form className="form-1" >
               <label className="filterText">Pick your Restaurant Food Style  </label>
               <br></br>
-              <select onChange={this.handleInputChange.bind(this)}>
+              <select onChange={this.handleInputChange}>
                 {this.state.restaurants.map(rest => (<option key={rest.id} value={rest.rest}>
                   {rest.rest}
                 </option>))}
               </select>
               <div className="btn-group-toggle, checkBox" >
                 <label className="btn btn-secondary ">
-                  <input type="checkbox" autocomplete="off" name="Indoor"aria-pressed="true" checked={this.state.dateIn} onChange={this.handleClick.bind(this)} /> In Door
+                  <input type="checkbox" autocomplete="off" name="dateIn" checked={this.state.dateIn} onChange={this.handleInputChange} /> In Door
                 </label>
               </div>
-              <div className="btn-group-toggle, checkBox" data-toggle="buttons">
+              <div className="btn-group-toggle, checkBox">
                 <label className="btn btn-secondary ">
-                  <input type="checkbox" autocomplete="off" name="OutDoor" checked={this.state.dateOut} onChange={this.handleClick.bind(this)} /> Out door
+                  <input type="checkbox" autocomplete="off" name="dateOut" checked={this.state.dateOut} onChange={this.handleInputChange} /> OutDoor
+
                 </label>
               </div>
               <div className="btn-group btn-group-toggle checkBox" >
                 <label className="btn btn-secondary ">
-                  <input type="radio" name="option" id="option2" aria-pressed="true" onChange={this.handleClick.bind(this)}/>Event</label>
+                  <input type="radio" name="option" id="option2" onChange={this.handleInputChange} />Event</label>
                 <label className="btn btn-secondary">
-                  <input type="radio" name="option" id="option3" onChange={this.handleClick.bind(this)}/>Dinning</label>
+                  <input type="radio" name="option" id="option3" onChange={this.handleInputChange} />Dinning</label>
               </div>
               <br></br>
               <Form.Group controlId="exampleForm.ControlSelect1">

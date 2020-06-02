@@ -1,5 +1,5 @@
 const express = require("express");
-
+const path = require("path");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -19,8 +19,11 @@ app.use(routes);
 // Connect to the Mongo DB
 // TODO: rename the database to something that will relate to our app
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/DateCreateDB");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/datecreateDB");
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 // Start the API server
 app.listen(PORT, function() {

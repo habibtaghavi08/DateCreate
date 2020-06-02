@@ -6,20 +6,26 @@ import { Col, Row, Container } from "../components/Grid";
 // import { List, ListItem } from "../components/List";
 import { ProfileBtn, CompletedBtn, PlannedDateBtn } from "../components/Form";
 import "../components/Jumbotron/style.css";
-import ReactDom from "react-dom";
+// import ReactDom from "react-dom";
 // import { Redirect, NavLink } from "react-router-dom";
 
 
 // just making a change // 
 class CompDates extends React.Component {
 
-    state= {
-        dateName:[],
-        score: "",
-        comment:"",
 
+    state = {
+        dateName: [{
+            dateName: "Romantic Sushi",
+            dateTime: "Night",
+            dateLocation: "Nashville",
+            dateBudget: "$$$",
+            dateRestaurant: "MoriMori Sushi and Grill",
+            dateEvent: "Bob's Mini Golf",
+            dateRating: 4.5,
+            dateReview: "The sushi was excellent and the drinks were wonderful. So much fun playing mini golf!",
+        }],
     };
-
     componentDidMount() {
 
         this.loadCompDates();
@@ -28,11 +34,11 @@ class CompDates extends React.Component {
     };
 
     loadCompDates = () => {
-                // need to route the .getCompDates().then(res =>this.setState({dateName: res.data, score: "", comment:""})).catch(err => console.log(err));
+        // need to route the .getCompDates().then(res =>this.setState({dateName: res.data, score: "", comment:""})).catch(err => console.log(err));
 
     };
 
-    deleteDate = id => {
+    removeDate = id => {
         //console.log(id), route to deleteDate(id).then(res => this.loadCompDates()).catch(err => console.log(err)))
     };
 
@@ -83,20 +89,20 @@ class CompDates extends React.Component {
                     <Col size="md-4" >
                         <form>
                             <Jumbotron>
-                            <p className="rDates">Most recent dates </p></Jumbotron>
+                                <p className="rDates">Most recent dates </p></Jumbotron>
 
                         </form>
                     </Col>
                     <Col size="md-2">
                         <form >
                             <Jumbotron>
-                           <h3 className="scoreTxt">Score of Date</h3></Jumbotron>
+                                <h3 className="scoreTxt">Score of Date</h3></Jumbotron>
                         </form>
                     </Col>
                     <Col size="md-4">
                         <form >
                             <Jumbotron>
-                            <p className="rDates">User Comments</p></Jumbotron>
+                                <p className="rDates">User Comments</p></Jumbotron>
 
                         </form>
                     </Col>
@@ -110,16 +116,21 @@ class CompDates extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col size="md-12" className= "plResults">
+                    <Col size="md-12" className="plResults">
                         {this.state.dateName.map(date => (
                             <div className="row" key={date._id}>
 
-                        <Completed >
+                                <Completed
+                                    dateName={date.dateName}
+                                    dateRestaurant={date.dateRestaurant}
+                                    dateEvent={date.dateEvent}
+                                    dateLocation={date.dateLocation}
+                                    dateRating={date.dateRating}
+                                    dateReview={date.dateReview} />
+                            </div>
 
-
-                        </Completed></div>
                         ))}
-           
+
                     </Col>
                 </Row>
 

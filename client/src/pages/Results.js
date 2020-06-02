@@ -2,18 +2,25 @@ import React from "react";
 import Jumbotron from "../components/Jumbotron";
 //import API from "../utils/API";
 import {Col, Row, Container} from "../components/Grid";
-import {CompletedBtn, PlannedDateBtn, SaveCompletedBtn, SavePlannedDateBtn, ShuffleBtn} from "../components/Form";
+import {SaveCompletedBtn, SavePlannedDateBtn, ShuffleBtn} from "../components/Form";
 import useBusinessSearch from "../utils/hooks/yelp-api/useBusinessSearch";
 import BusinessSearchResults from "../components/SearchResults/BusinessSearchResults"
 import "./css/results.css"
 import useActivitySearch from "../utils/hooks/yelp-api/useActivitySearch";
 import ActivitySearchResults from "../components/ActivitySearchResults/ActivitySearchResults";
+
 //import Form from 'react-bootstrap/Form';
 
 
+
+
 export default function Search() {
-    const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(2, "Breakfast", 16093, "nashville,tn")
-    const [events, amounteventsResults, searcheventsParams, seteventsSearchParams] = useActivitySearch("film", 40000, "nashville,tn", 50)
+    const dateTime = new Date().getTime();
+    const timestamp = Math.floor(dateTime / 1000);
+    console.log(timestamp)
+    const categories = ("festivals-fairs, music")
+    const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(2, "Mexican", 40000, "nashville,tn")
+    const [events, amounteventsResults, searcheventsParams, seteventsSearchParams] = useActivitySearch(categories, 40000, "nashville,tn", 50, timestamp)
 
 
     function refreshPage() {
@@ -49,18 +56,8 @@ export default function Search() {
                     </div>
                 </Col>
                 <Col size="md-2">
-                    <CompletedBtn
-
-                    //onClick={this.handleFormSubmit}
-                    >
-                        Completed Dates
-                        </CompletedBtn>
-                    <PlannedDateBtn
-
-                    //onClick={this.handleFormSubmit}
-                    >
-                        Planned Dates
-                        </PlannedDateBtn>
+                    <a className="btn btn-info btn btn-info btn-block btn-lg" href="/planned" role="button">Favorite Dates</a>
+                    <a className="btn btn-info btn btn-info btn-block btn-lg" href="/completed" role="button">Completed Dates</a>
                 </Col>
             </Row>
             <Row>

@@ -1,10 +1,22 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../components/Grid";
-import { render } from "react-dom";
+// import { render } from "react-dom";
 import Jumbotron from "../components/Jumbotron";
 import { ProfileBtn, CompletedBtn, PlannedDateBtn } from "../components/Form";
 
 class Profile extends Component {
+    state = {
+        user:[{
+            userName: "guestUser",
+            password: "Psswrd#1",
+            email: "guestuser@gmail.com",
+            phoneNumber: 6155223992,
+            Age: 36,
+            datesList: []
+        }],
+
+    }
+
 
     componentDidMount() {
 
@@ -42,8 +54,10 @@ class Profile extends Component {
                     <Col size="md-4">
                         <form className="form-1">
                             <div>
-                                <h4>User Name</h4></div>
+                                <h4>User Name</h4>
+                                <button className="card-link"  >Edit</button></div>
                         </form>
+
                     </Col>
                     <Col size="md-3" >
                     </Col>
@@ -61,6 +75,7 @@ class Profile extends Component {
                         <form  className="form-1">
                             <div>
                                 <h4>User Password</h4></div>
+                                <button className="card-link"  >Edit</button>
                         </form>
                     </Col>
                     <Col size="md-3" >
@@ -79,6 +94,7 @@ class Profile extends Component {
                             <div>
                                 <h4>User PhoneNumber</h4>
                             </div>
+                            <button className="card-link"  >Edit</button>
                         </form>
                     </Col>
                     <Col size="md-3" >
