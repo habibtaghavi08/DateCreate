@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-// TODO: rename the database to something that will relate to our app
+
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/datecreateDB");
 
